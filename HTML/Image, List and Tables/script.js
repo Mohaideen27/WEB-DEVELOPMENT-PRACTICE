@@ -1,0 +1,1 @@
+alert("Practicing Image, List and Tables")
