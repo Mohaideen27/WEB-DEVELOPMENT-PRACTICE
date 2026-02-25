@@ -1,0 +1,1 @@
+alert("Day 1 of Practicing HTML")
