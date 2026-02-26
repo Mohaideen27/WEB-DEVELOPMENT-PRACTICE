@@ -1,0 +1,87 @@
+h1  Basic HTML syntax
+h2  What is HTML
+p   HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web pages you visit. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to link to another page, italicize words, and so on.
+
+p   HTML lives inside text files called HTML documents, or just documents, with a .html file extension. 
+
+p   Tags in HTML are not case-sensitive
+br
+h2  Anatomy of an HTML element
+link image  https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-small.png
+
+dl  The opening tag: This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.
+The content: This is the content of the element. In this example, it is the paragraph text — "My cat is very grumpy".
+The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results. 
+/dl
+br
+h3  Nesting elements
+p   Elements can be placed within other elements. This is called nesting. 
+p   The tags have to open and close so that they are inside or outside one another
+br
+h3  Void elements
+p   Not all elements follow the pattern of an opening tag, content, then a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document
+br 
+h2  Attributes
+link image  https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-attribute-small.png
+br 
+p   Attributes contain extra information about the element that isn't part of its content.
+dl
+An attribute should have:
+
+A space between it and the element name. When an element has more than one attribute, the attributes should be separated by spaces too.
+The attribute name, followed by an equals sign (=).
+An attribute value, wrapped with opening and closing quote marks.
+/dl
+br
+h3  Boolean attribules
+p   Sometimes you will see HTML attributes written without values. These are called Boolean attributes. When a boolean attribute is added, its value is set to true, irrespective of whatever value is assigned to it (even no value). If an attribute is not included in an HTML tag, its value is set to false.
+br
+h3  Omitting quotes around attributes values
+p   It is OK to omit the quotes from around attribute values in certain circumstances. But because this can break your markup in other circumstances, we advise you to always include the quote marks. Let's explore why.
+
+p   The element in the code snippet below, <a>, is called an anchor. Anchors enclose text and turn them into links. The href attribute specifies the URL the link points to. You can omit the quotes around the href attribute value shown below without any negative consequences, because it has no spaces in it.
+br
+h3  Single or double quotes?
+p   You can feel free to choose which one you prefer. Both of these lines are equivalent.Make sure you don't mix single quotes and double quotes.
+p   If you use one type of quote, you can include the other type of quote inside your attribute values.
+p   To use quote marks inside other quote marks of the same type. you can use character references.(eg. &quot;interesting&quot; )
+br
+h3  Anatomy of an HTML document
+dl
+
+<!doctype html> is the shortest string of characters that counts as a valid doctype, and it should be included at the top of all webpages.
+
+<html></html>: The <html> element. This element wraps all the content on the page. It is sometimes known as the root element.
+
+<head></head>: The <head> element. This element acts as a container for information about the page that isn't part of the content that users will see. This can include keywords and a page description to be shown in search results, CSS to style content, character set declarations, and more.
+
+<meta charset="utf-8">: A <meta> element. This element represents metadata that describes the page. The charset attribute specifies the character encoding your document will use. UTF-8 includes most characters from the vast majority of human written languages, which means the page will be able to display different languages successfully.
+
+<title></title>: The <title> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
+
+<body></body>: The <body> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, and so on.
+
+/ dl
+br
+h3  Adding some features to an HTML document
+p   for practicing purpose.
+br
+h2  Whitespace in HTML
+p   In almost all elements (there are exceptions such as <pre>), no matter how much whitespace you use inside HTML element content, the HTML parser reduces each sequence of whitespace to a single space when rendering the code.
+br
+h2  Character reference: including special characters in HTML
+p   In HTML, the characters <, >, ", ', and & are special characters. They are parts of the HTML syntax itself.  These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
+
+table 
+Literal character	Character reference equivalent
+<	&lt;
+>	&gt;
+"	&quot;
+'	&apos;
+&	&amp;
+/ table
+br
+h2  HTML comments
+p   HTML has a mechanism to write comments in the code. Browsers ignore comments, therefore they are invisible to the user. The purpose of comments is to allow you to include notes in the code to explain how it works. 
+p   To write an HTML comment, wrap it in the special markers <!-- and -->
+br
