@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms and input tags</title>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <!-- 1. The Core Purpose
+    id is for the Browser: It identifies a unique element so that CSS, JavaScript, or anchor links can find and manipulate it. It is like a person's Social Security Number—there should only be one on the entire page.
+
+    name is for the Server: It identifies the data being sent when a form is submitted. When you click "Submit," the server looks for the name to know what the value represents (e.g., username=John). -->
+
+      <!-- Text input for username -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <br /><br />
+
+      <!-- Password input -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <br /><br />
+
+      <!-- Radio buttons for gender -->
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+      <br /><br />
+
+      <!-- Submit button -->
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
