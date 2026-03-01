@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio, Video and other Media</title>
+  </head>
+  <body>
+    <h1 style="color: rebeccapurple">Adding Video samples</h1>
+    <h2 style="color: sienna">Video sample 1</h2>
+    <video
+      src="SampleMP4-1.mp4"
+      controls
+      height="300"
+      muted
+      poster="SampleIMG1.jpg"
+    ></video>
+    <h2 style="color: sienna">Video sample 2</h2>
+    <div>
+      <video
+        src="SampleMP4-3.mp4"
+        controls
+        height="300"
+        poster="SampleIMG2.jpg"
+      ></video>
+    </div>
+    <h1 style="color: chocolate">Adding audio samples</h1>
+    <section>
+      <label for=""><strong>Audio Sameple 1</strong></label>
+      <audio src="SampleMP3-0.mp3" muted autoplay controls></audio>
+    </section>
+    <section>
+      <label for=""><strong>Audio Sameple 2</strong></label>
+      <audio src="SampleOGG-1.ogg" muted controls preload="none"></audio>
+    </section>
+    <section>
+      <label for=""><strong>Audio Sameple 3</strong></label>
+      <audio src="SampleWAC-1.wav" controls preload="metadata"></audio>
+    </section>
+    <br />
+    <h2 style="color: rgb(43, 168, 226)">Adding SVG files</h2>
+    <section>
+      <h3 style="color: rgb(19, 170, 119)">SVG Sample 1</h3>
+      <svg height="100" width="100">
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="black"
+          stroke-width="3"
+          fill="red"
+        />
+      </svg>
+      <section>
+        <h3 style="color: rgb(19, 170, 119)">SVG Sample 2</h3>
+        <svg height="200" width="350">
+          <path
+            id="lineAC"
+            d="M 30 180 q 150 -250 300 0"
+            stroke="WHEAT"
+            stroke-width="50"
+            fill="BROWN"
+          />
+          <text style="fill: green; font-size: 25px">
+            <textPath href="#lineAC" startOffset="80">
+              I love HTML! I love HTML!
+            </textPath>
+          </text>
+        </svg>
+      </section>
+      <section>
+        <h3 style="color: rgb(19, 170, 119)">SVG Sample 3</h3>
+        <img src="img.svg" alt="svg image" />
+      </section>
+    </section>
+    <h2 style="color: yellowgreen;">Adding iframe</h2>
+    <h3 style="color: rgb(121, 45, 57);">Sample 1</h3>
+    <iframe src="https://www.wikipedia.org/" height="500" width="100%"></iframe>
+    <h3 style="color: rgb(152, 102, 40);">Sample 2</h3>
+    <iframe src=https://www.codewithharry.com/tutorial/html-iframes height="500" width="100%"></iframe>
+  </body>
+  <section>
+    <h2 style="color: rgb(122, 12, 12);">Adding Embed video</video></h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pAnGwRiQ4-4?si=6XOpDHpwLF_TtNta" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+</html>
