@@ -1,0 +1,226 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors in CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <p id="more">
+        <strong><a href="">Other Style topics</a></strong>
+      </p>
+      <h1>Selectors in CSS</h1>
+      <nav id="navigation-bar">
+        <strong>
+          <ul>
+            <li>
+              <a href="">Simple Selectors</a>
+              <ul>
+                <li>Element Selector</li>
+                <li>Class Selector</li>
+                <li>ID Selector</li>
+                <li>Universal Selector</li>
+                <li>Grouping Selector</li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Combinator Selectors</a>
+              <ul>
+                <li>Descendent Selector</li>
+                <li>Child Selector</li>
+                <li>Adjacent Sibling Selector</li>
+                <li>General Sibling Selectors</li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Pseudo Selectors</a>
+              <ul>
+                <li>Pseudo-class Selectors</li>
+                <li>Pseudo-element Selectors</li>
+              </ul>
+            </li>
+            <li><a href="">Attribute Selectos</a></li>
+          </ul>
+        </strong>
+      </nav>
+    </header>
+    <main>
+      <section id="simple-selectors">
+        <h2>Simple Selectors</h2>
+        <p>
+          These selectors target elements based on their most fundamental
+          characteristics.
+        </p>
+        <article>
+          <h3>Element Selector</h3>
+          <p>Selects all elements of a given HTML tag name.</p>
+        </article>
+        <article>
+          <h3>Class Selector</h3>
+          <p>
+            Selects all elements with a specific attribute. It is denoted by a
+            period () followed by the class name.
+          </p>
+        </article>
+        <article>
+          <h3>ID Selector</h3>
+          <p>
+            Selects a single, unique element with a specific attribute. It is
+            denoted by a hash () followed by the ID name. An ID should only be
+            used once per page.
+          </p>
+        </article>
+        <article>
+          <h3>Universal Selector</h3>
+          <p>
+            Universal Selector: Selects all elements on the page. It is denoted
+            by an asterisk ().
+          </p>
+        </article>
+        <article>
+          <h3>Grouping Selector</h3>
+          <p>
+            Combines multiple selectors into a comma-separated list to apply the
+            same styles to all of them, avoiding redundant code.
+          </p>
+        </article>
+      </section>
+      <section id="combinator-selectors">
+        <h2>Combinator Selectors</h2>
+        <p>
+          Combinators are used to select elements based on the relationship
+          between them and other elements in the document tree.
+        </p>
+        <div>
+          <h3>Descendant Selectors</h3>
+          <p>
+            Selects all elements that are a descendant of a specified element,
+            regardless of how deep they are nested. It is denoted by a space
+            between selectors.
+          </p>
+        </div>
+        <div>
+          <h3>Child Selector</h3>
+          <p>
+            Selects elements that are direct children of a specified element. It
+            is denoted by the greater-than sign () (e.g., selects only elements
+            whose immediate parent is a ).
+          </p>
+        </div>
+        <div>
+          <h3>Adjacent Sibling Selector:</h3>
+          <p>
+            Selects an element that is the immediate next sibling of another
+            specified element. It is denoted by a plus sign () (e.g., selects
+            the first element that immediately follows an )
+          </p>
+        </div>
+        <div>
+          <h3>General Sibling Selector</h3>
+          <p>
+            Selects all sibling elements that follow a specified element. It is
+            denoted by a tilde () (e.g., selects all elements that follow an ,
+            as long as they share the same parent). [8, 13, 14, 15, 16]
+          </p>
+        </div>
+      </section>
+      <section id="pseudo-selectors">
+        <h2>Pseudo Sectors</h2>
+        <div>
+          <h3>Pseudo-class Selectors</h3>
+          <p>
+            Pseudo-classes select elements based on a specific state, condition,
+            or position that is not described in the document tree. They are
+            indicated by a single colon ()
+          </p>
+          <ul>
+            <li>
+              <strong>:hover:</strong> Styles an element when the user's mouse
+              cursor is over it (e.g., changes the style of a link when
+              hovered).
+            </li>
+            <li>
+              <strong>:focus:</strong> Styles an element when it has focus
+              (e.g., a form input field).
+            </li>
+            <li>
+              <strong>:nth-child():</strong> Selects elements based on their
+              position among a group of siblings (e.g., selects the second
+              paragraph).
+            </li>
+            <li>
+              <strong>:visited:</strong>Styles links that the user has already
+              visited (e.g., ).
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pseudo-element Selectors</h3>
+          <p>
+            Pseudo-elements are used to style a specific part of an element or
+            to insert content before or after an element. They are indicated by
+            a double colon ().
+          </p>
+          <ul>
+            <li>
+              <strong>::before:</strong> Inserts generated content before the
+              actual content of an element
+            </li>
+            <li>
+              <strong>::after:</strong> Inserts generated content after the
+              actual content of an element
+            </li>
+            <li>
+              <strong>::first-line:</strong> Styles the first formatted line of
+              a block-level element
+            </li>
+            <li>
+              <strong>::first-letter:</strong> Styles the first letter of a
+              block-level element.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="attribute-selectors">
+        <h2>Attribute Selectors</h2>
+        <p>
+          These selectors select elements based on the presence or value of a
+          specific HTML attribute. They are contained within square brackets ().
+        </p>
+        <div>
+          <ul>
+            <li>
+              <strong>[attribute]:</strong> Selects all elements that have the
+              specified attribute, regardless of its value (e.g., selects all
+              anchor tags with a attribute)
+            </li>
+            <li>
+              <strong>[attribute="value"]:</strong> Selects elements where the
+              attribute's value matches exactly (e.g., selects all input fields
+              with the type "text").
+            </li>
+            <li>
+              <strong>[attribute^="value"]:</strong> Selects elements whose
+              attribute value begins with a specific substring (e.g., selects
+              links where the starts with "https")
+            </li>
+            <li>
+              <strong>[attribute$="value"]: </strong>Selects elements whose
+              attribute value ends with a specific substring (e.g.,
+              `a[href$=".pdf"]href` ends with ".pdf")
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <aside id="more-bottom">
+      <ul>
+        <a href="">Box Model</a>
+        <a href="">Text Styling</a>
+        <a href="">Colors</a>
+        <a href="">Links</a>
+      </ul>
+    </aside>
+  </body>
+</html>
