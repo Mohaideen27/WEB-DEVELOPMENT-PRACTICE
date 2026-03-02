@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline, Internal and External CSS</title>
+    <style>
+      #internal-css {
+        color: royalblue;
+        background-color: beige;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: rgb(242, 223, 198)">
+    <header>
+      <h1>Understanding Inline, Internal and External CSS</h1>
+    </header>
+    <nav>
+      <ol>
+        <li><a href="">Inline CSS</a></li>
+        <li><a href="">Internal CSS</a></li>
+        <li><a href="">External CSS</a></li>
+      </ol>
+    </nav>
+    <main>
+      <article style="color: maroon; background-color: antiquewhite">
+        <h2>Inline CSS</h2>
+        <p>
+          Inline CSS is used to add custom properties to specific elements. The
+          added style will only reflect on that particular element only.
+        </p>
+        <p>
+          <strong>Implementation</strong> To use inline CSS, insert the style
+          attribute within the HTML element's opening tag.
+        </p>
+      </article>
+      <article id="internal-css">
+        <h2>Internal CSS</h2>
+        <p>
+          Internal CSS is used to apply custom style to multiple elements on the
+          same page. The style can be used throughout the HTML page.
+        </p>
+        <p>
+          <strong>Implementation</strong> Internal CSS is defined in a style
+          block, which will be inside the head section.
+        </p>
+      </article>
+      <article id="external-css">
+        <h2>External CSS</h2>
+        <div>
+          <p>
+            External CSS works similarly to internal CSS but with a twist.
+            Instead of adding the styles within the HTML file, we create a
+            separate file with a .css extension. This file will hold all the
+            styling details. Then, we link this file to the HTML page, giving it
+            the instructions on how to look.
+          </p>
+        </div>
+        <div>
+          <p>
+            There is a new &lt;link /&gt; tag in the head section, and this link
+            tag has rel and href properties.
+          </p>
+          <ul>
+            <dt>
+              <p>
+                <strong
+                  >The following points will explain each keyword's
+                  meaning:</strong
+                >
+              </p>
+            </dt>
+            <li>
+              &lt;link /&gt;: This tag is used to create links between different
+              resources, like stylesheets, fonts, and more. In our case, we are
+              using a link tag to link the CSS file with the HTML file.
+            </li>
+            <li>
+              rel="stylesheet": rel stands for relationship, this defines the
+              type of relationship between the HTML document and the linked
+              resource.When set to "stylesheet", it specifies that the linked
+              resource is a stylesheet that will be used to style the HTML
+              content.
+            </li>
+            <li>
+              href="style.css": The href attribute stands for "hypertext
+              reference."It specifies the path or URL to the external resource
+              we want to link. In this case, it's the path to the external CSS
+              file called "style.css".
+            </li>
+          </ul>
+        </div>
+      </article>
+    </main>
+    <footer style="color: blueviolet; background-color: rgb(158, 236, 236)">
+      <em>
+        <h4>Note:</h4>
+        <p>
+          Here we used Inline, Internal and External CSS to the respective topic
+          definition
+        </p>
+      </em>
+    </footer>
+  </body>
+</html>
