@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector Practice Project</title>
+    <style>
+      /* Basic Selectors */
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+      }
+
+      /* Element Selector: Targets all <body> tags  */
+      body {
+        background-color: antiquewhite;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      /* ID Selector: Target the header with main title ID */
+      #main-title {
+        color: rgb(69, 68, 68);
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      /* Class Selector: Target all the elemets with 'highlight' */
+      .highlight {
+        background-color: rgb(230, 181, 118);
+      }
+
+      /* Grouping Selector: Styles h2 and h3 the same way */
+      h2,
+      h3 {
+        border-bottom: 2px solid rgb(170, 170, 170);
+      }
+
+      /* Combinator Selectors */
+
+      /* Descendant Selector: any <span> inside a <div> */
+      div span {
+        font-weight: bold;
+      }
+
+      /* Child Selector: Only <li> that are direct children of parent list */
+      .parent-list > li {
+        list-style-type: square;
+      }
+
+      /* Adjancent Sibiling: the <p> immediately after an <h2> */
+      h2 + p {
+        font-style: italic;
+        margin-top: 0;
+      }
+
+      /* General Sibiling Selector: all <p> elements that follow an <h3> */
+      h3 ~ p {
+        color: rgb(128, 80, 8);
+      }
+
+      /* PSEUDO CLASS SELECTORS */
+      /* :hover: change link color on mouse over */
+      a:hover {
+        color: brown;
+      }
+
+      /* :focus: Highlights the input when clicked into */
+      input:focus {
+        outline: 2px solid rgb(0, 0, 0);
+        background-color: rgb(252, 208, 208);
+        color: brown;
+        font-weight: bold;
+      }
+
+      /* :nth-child(): Targets the 2nd item in a list */
+      ul li:nth-child(2) {
+        background-color: rgb(255, 214, 165);
+      }
+
+      /* visited: styles links already clicked */
+      a:visited {
+        color: green;
+      }
+
+      /* PSEUDO-Element Selectors */
+      /* ::before: Adds a symbol before a specific class */
+
+      .note::before {
+        content: "Note: ";
+        color: brown;
+        font-weight: bold;
+      }
+
+      /* ::after: Adds Text after a specific class */
+      .warning::after {
+        content: " [Caution!]";
+        color: brown;
+        font-size: 0.8em;
+      }
+
+      /* ::first-line and ::first-letter */
+      .intro-text::first-line {
+        font-weight: bold;
+      }
+      .intro-text::first-letter {
+        font-size: 200%;
+        color: rgb(102, 64, 6);
+      }
+
+      /* [attribute='value']: Exact match for type="text" */
+      input[type="text"] {
+        border: 5px solid brown;
+        padding: 5px;
+      }
+      /* [attribute^="value"]: Starts with "https" */
+      a[href^="https"] {
+        font-weight: bold;
+      }
+
+      /* [attribute$="value"]: Ends with ".pdf" */
+      a[href$=".pdf"] {
+        color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-title">CSS Selector Project</h1>
+    <div>
+      <h2>1. Basic & Combinators</h2>
+      <p class="highlight">
+        This paragraph is styled via the
+        <strong>Adjacent Sibiling Selector </strong> because it follows an H2.
+      </p>
+      <p>
+        This paragraph not affected by adjacent sibiling selector because it not
+        follows a immediately an H2
+      </p>
+      <div class="container">
+        <span>I am a descendant span.</span>
+        <p>I am just a <span>cool</span> normal paragraph.</p>
+      </div>
+      <ul class="parent-list">
+        <li>Direct Child 1 (Square bullet)</li>
+        <li>Direct Child 2 (nth child background)</li>
+        <li>
+          Direct Child 3
+          <ul>
+            <li>Grandchild (Not affected by child selector&lt;)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <div>
+      <h3>Pseudo & Attributes</h3>
+      <p>
+        This paragraph follows an H3, so it uses the
+        <strong>General Sibiling Selector</strong>.
+      </p>
+      <p>
+        Similar to Descendant Selector but it follows the sibiling elements not
+        child elements
+      </p>
+      <ul style="border: 2px solid gray">
+        <li style="list-style: none">
+          Child not affecteds by the sibiling selector.
+        </li>
+      </ul>
+      <p class="intro-text">
+        The first letter and first line of this paragraph are styled using
+        pseudo-elements! This makes it look like a classic manuscript.
+      </p>
+      <p class="note">This is a helpful tip.</p>
+      <p class="warning">Keep an eye out for this.</p>
+      <p>
+        Check out our
+        <a href="https://google3.com" title="google">Go to Google</a> or check
+        the image <a href="demo.pdf">Demo</a>.
+      </p>
+      <form>
+        <label>Username:</label>
+        <input type="text" placeholder="Click me for :focus effect" />
+      </form>
+    </div>
+  </body>
+</html>
