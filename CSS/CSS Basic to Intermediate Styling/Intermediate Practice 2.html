@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        section{
+            border: 2px solid gainsboro;
+            border-radius: 10px;
+            width: 350px;
+        }
+        .image{
+            display: block;
+            width: 300px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            margin: 10px auto;
+        }
+
+        .tag{
+            box-sizing: border-box;
+            display: inline;
+            background-color: rgb(246, 246, 246);
+            border: 1px solid gray;
+            padding: 1px 5px;
+            margin: 0 20px;
+            text-align: center;
+            border-radius: 10px;
+            border-color: gray;
+            color: rgb(63, 63, 63);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .description{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(115, 116, 116);
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .description_header{
+            font-weight: bolder;
+            color: black;
+            text-align: left;
+        }
+        .btn{
+            display: block;
+            margin: 10px auto;
+            background-color: rgb(162, 204, 237);
+            color: rgb(70, 128, 171);
+            font-weight: bold;
+            border-radius: 10px;
+            box-sizing: border-box;
+            position: relative;
+            border: 1px solid skyblue;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <img src="beautiful-lake-mountain.avif" alt="Mountain with lake image" class="image" />
+      </div>
+      <div>
+        <p class="tag">Nature</p>
+        <p class="tag">Lake</p>
+      </div>
+      <div class="description">
+        <h2 class="description_header">Lago di Braies</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint neque
+          laudantium quidem praesentium odit saepe eum dolorum. Aliquam,
+          laboriosam iure.
+        </p>
+      </div>
+      <div><button class="btn">Read More</button></div>
+    </section>
+  </body>
+</html>
