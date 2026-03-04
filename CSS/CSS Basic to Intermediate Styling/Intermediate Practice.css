@@ -1,0 +1,192 @@
+/* CSS SIZE & BOX MODEL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 20px;
+  /* CSS Colors: Hexadecimal */
+  background-color: #e8e8e8;
+}
+
+.box-model-demo {
+  /* Size */
+  width: 90%;
+  /* border: 2px solid red; */
+  max-width: 600px;
+  /* min-width: 600px; */
+  min-height: 150px;
+  /* Spacing */
+  /* auto automatically left and right spacing */
+  margin: 20px auto;
+  /* padding top&bottom left&right */
+  padding: 10px 25px;
+  /* border-style*/
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333;
+  border-radius: 15px;
+
+  /* background */
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #ee9494, #2a4d5d);
+}
+
+/* text styling */
+
+.text-demo {
+  color: rgb(3, 10, 55);
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 4px;
+  word-spacing: 8px;
+  line-height: 1;
+}
+
+/* Links, Hover & Cursors */
+
+a.custom-link:link {
+  color: brown;
+  text-decoration: none;
+}
+
+a.custom-link:visited {
+  color: #2a4d5d;
+}
+
+a.custom-link:active {
+  color: rgb(255, 223, 162);
+}
+
+/* Buttons Styling */
+
+.btn {
+  background-color: bisque;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 2s ease;
+}
+
+.btn:hover {
+  background-color: chocolate;
+}
+
+/* List Styles */
+
+.custom-list {
+  list-style-type: lower-greek;
+  list-style-position: inside;
+  padding-left: 0;
+  color: rgb(11, 11, 66);
+}
+
+/* Image & Video */
+
+.media-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.styled-image {
+  width: 550px;
+  height: 250px;
+  border-radius: 10%;
+  border: 4px dashed grey;
+}
+.styled-video {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 3px solid grey;
+  border-radius: 5px;
+}
+
+.overflow-demo {
+  width: 300px;
+  height: 80px;
+  border: 2px solid rgb(43, 28, 28);
+  margin: 20px auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: col-resize;
+}
+
+/* Float & Clear */
+
+.float-container {
+  border: 2px solid darkgreen;
+  padding: 10px;
+  overflow: auto;
+}
+.box-left {
+  float: left;
+  width: 45%;
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+.box-right {
+  float: right;
+  width: 45%;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+/* Positioning & Z -Index */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  z-index: 100;
+}
+
+.position-container {
+  position: relative;
+  height: 200px;
+  background-color: #e0e0e0;
+  margin-top: 20px;
+  border: 2px solid darkgrey;
+}
+
+.absolute-box-1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  z-index: 1;
+}
+
+.absolute-box-2 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 47, 255);
+  z-index: 2;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(140, 140, 73);
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 999;
+}
