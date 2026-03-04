@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intermediate Practice</title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <div class="sticky-header">
+      I am a <strong>STICKY HEADER</strong>
+      Scroll down to see me stick to the top.
+    </div>
+    <div class="box-model-demo">
+      <h1 class="text-demo">CSS Box Model</h1>
+      <p>
+        This box demostrate the <strong>Box Model</strong>. It has a max-width,
+        margin-auto to center it, padding inside, and a rounded solid border.
+        The background is a linear gradient
+      </p>
+      <p>
+        Here is a <a href="#" class="custom-link">Custom link</a>. Hover over it
+        to see the color change, underline appear, and the cursor turn into a
+        "help" icon
+      </p>
+      <button class="btn">Click Me (Hover Effect)</button>
+      <h3>Things to Learn</h3>
+      <ul class="custom-list">
+        <li>CSS Selector</li>
+        <li>Box Model Properties</li>
+        <li>Layout Mechanisms</li>
+      </ul>
+    </div>
+    <div class="overflow-demo">
+      <strong>OverFlow Scroll:</strong>
+      <br />
+      This box has a fixed height of 100px. Because this text is very long, it
+      will overflow the box. Instead of spilling out and ruining the layout, we
+      used "overflow-y:scroll" to add a vertical scrollbar inside the specific
+      inside this specific box. Keep scrolling to read the end!
+    </div>
+    <div class="box-model-demo">
+      <h3>CSS Float Demo</h3>
+      <div class="float-container">
+        <div class="box-left">I am Float Left(Width 45%)</div>
+        <div class="box-right">I am Float Right(Width 45%)</div>
+      </div>
+    </div>
+    <div class="media-container">
+      <h3>CSS Media (Image & Video)</h3>
+      <img
+        src="Float-web-layout.webp"
+        alt="CSS Float Web layout"
+        class="styled-image"
+      />
+      <br /><br />
+      <iframe
+        class="styled-video"
+        src="https://www.youtube.com/embed/yqaLSlPOUxM?si=vX9DMj4VXzmGcDcM"
+        title="Youtube video player"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="box-model-demo">
+      <h3>CSS Positioning & Z-Index</h3>
+      <p>
+        The gray box is <code>position: relative</code>. The colored boxes
+        inside are <code>position: absolute</code>. The blue box overlaps the
+        red box because it has a higher <code>Z-Index</code>.
+      </p>
+      <div class="position-container">
+        <div class="absolute-box-1">Red Box(Z-Index: 1)</div>
+        <div class="absolute-box-2">Blue Box(Z-Index: 2)</div>
+      </div>
+    </div>
+    <div class="fixed-button">Fixed!</div>
+
+    <div style="height: 1000px; padding: 20px; text-align: center; color: #888">
+      <p><em>(Scroll down to see fixed and sticky positionin in action)</em></p>
+    </div>
+  </body>
+</html>
