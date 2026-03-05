@@ -1,0 +1,75 @@
+/* BOX MODEL & SIZE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* BACKGROUND & COLORS */
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: antiquewhite;
+  color: rgb(145, 81, 81);
+  line: height 1.6;;}
+/* POSITIONING & Z-INDEX */
+.navbar{
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: rgb(245, 186, 108);
+  color: white;
+  padding:15px 20px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 3px;
+}
+
+.main-container{
+  position: relative; 
+  max-width: 900px;
+  margin: 80px auto 40px auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px;
+}
+
+/* TEXT STYLING */
+h1, h2{
+  color: rgb(129, 44, 44);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* POSITIONING */
+.profile-header{
+  position: relative;
+  border-bottom: 2px dashed rgb(141, 84, 84);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.badge{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgb(248, 204, 204);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* FLOAT & IMAGE */
+.profile-img
+{
+  float:left;
+  width: 160px;
+  height: 180px;
+  margin: 5px 20px 20px 5px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px;
+}
