@@ -5,26 +5,27 @@
   padding: 0;
 }
 /* BACKGROUND & COLORS */
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: antiquewhite;
   color: rgb(145, 81, 81);
-  line: height 1.6;;}
+  line: height 1.6;
+}
 /* POSITIONING & Z-INDEX */
-.navbar{
+.navbar {
   position: fixed;
-  top:0;
+  top: 0;
   width: 100%;
   background-color: rgb(245, 186, 108);
   color: white;
-  padding:15px 20px;
+  padding: 15px 20px;
   text-align: center;
   z-index: 1000;
   box-shadow: 0 2px 3px;
 }
 
-.main-container{
-  position: relative; 
+.main-container {
+  position: relative;
   max-width: 900px;
   margin: 80px auto 40px auto;
   padding: 20px;
@@ -34,7 +35,8 @@ body{
 }
 
 /* TEXT STYLING */
-h1, h2{
+h1,
+h2 {
   color: rgb(129, 44, 44);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -42,19 +44,32 @@ h1, h2{
   margin-bottom: 20px;
 }
 
-/* POSITIONING */
-.profile-header{
+/* FLOAT & IMAGE */
+.profile-img {
   position: relative;
-  border-bottom: 2px dashed rgb(141, 84, 84);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  overflow: auto;
+  float: left;
+  width: 160px;
+  height: 180px;
+  top: -23px;
+  margin: 0px 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px;
 }
 
-.badge{
+/* POSITIONING */
+.profile-header {
+  position: relative;
+  border-bottom: 2px dashed rgb(141, 84, 84);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  overflow: visible;
+}
+
+.badge {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -10px;
+  right: -10px;
   background-color: rgb(248, 204, 204);
   padding: 5px 10px;
   border-radius: 20px;
@@ -63,13 +78,71 @@ h1, h2{
   z-index: 10;
 }
 
-/* FLOAT & IMAGE */
-.profile-img
-{
-  float:left;
-  width: 160px;
-  height: 180px;
-  margin: 5px 20px 20px 5px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px;
+/* LIST STYLE */
+.skill-section {
+  background-color: antiquewhite;
+  padding: 15px;
+  border-left: 5px solid;
+  margin-bottom: 20px;
+  /* list-style: inside; */
+}
+
+.skill-list {
+  list-style-position: inside;
+  list-style-type: square;
+}
+
+/* OVERFLOW */
+
+.bio-box {
+  height: 200px;
+  overflow-y: scroll;
+  /* scroll-padding: inherit; */
+  box-shadow: 0 0 5px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+/* BUTTON, HOVER & CURSOR */
+.btn-hire {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgb(245, 186, 108);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn-hire:hover {
+  background-color: rgb(236, 152, 41);
+  transform: scale(1.05);
+}
+
+/* LINKS */
+.footer-links {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #bebdbd;
+}
+
+.footer-links a:link,
+.footer-links a:visited {
+  color: #287eb7;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.footer-links a:active {
+  color: brown;
 }
