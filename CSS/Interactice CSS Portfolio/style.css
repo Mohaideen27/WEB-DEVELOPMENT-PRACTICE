@@ -9,7 +9,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: antiquewhite;
   color: rgb(145, 81, 81);
-  line: height 1.6;
+  line-height: height 1.6;
 }
 /* POSITIONING & Z-INDEX */
 .navbar {
