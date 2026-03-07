@@ -17,5 +17,69 @@
         &amp; Flexbox - using this as visual reference and playground.
       </p>
     </header>
+
+    <!-- SECTION 1 GRID BASICS  -->
+
+    <section class="section">
+      <span class="tag grid">CSS GRID</span>
+      <h2 class="section-title">1. Grid Basics</h2>
+      <p class="section-subtitle">
+        display:grid • grid-template-colums • grid-template-rows • gap •
+        column-gap • row-gap
+      </p>
+      <p class="prop-label">
+        grid-template-column: 1fr 1fr 1fr - three equal columns
+      </p>
+      <div class="demo-box">
+        <div class="grid-basic-3col">
+          <div class="cell">A</div>
+          <div class="cell">B</div>
+          <div class="cell">C</div>
+          <div class="cell">D</div>
+          <div class="cell">E</div>
+          <div class="cell">F</div>
+        </div>
+      </div>
+      <p class="prop-label">grid-template-column:200px 1fr 2fr - mixed units</p>
+      <div class="demo-box">
+        <div class="grid-basic-mixed">
+          <div class="cell accent1">200px</div>
+          <div class="cell accent2">1fr</div>
+          <div class="cell accent3">2fr</div>
+        </div>
+      </div>
+
+      <p class="prop-label">repeat(4,1fr) - shorthand repeat function</p>
+      <div class="demo-box">
+        <div class="grid-repeat">
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+        </div>
+      </div>
+      <p class="prop-label">grid-template-row: 60px 100px - explicit row heights</p>
+      <div class="demo-box">
+        <div class="grid-rows">
+            <div class="cell">60px row</div>
+            <div class="cell">60px row</div>
+            <div class="cell">60px row</div>
+            <div class="cell">100px row</div>
+            <div class="cell">100px row</div>
+            <div class="cell">100px row</div>
+        </div>
+      </div>
+      <p class="prop-label">column-gap: 30px • row-gap: 8px - independent gaps</p>
+      <div class="demo-box">
+        <div class="grid-col-gap">
+            <div class="cell" accent4>Wide col-gap</div>
+            <div class="cell" accent4>Wide col-gap</div>
+            <div class="cell" accent4>Wide col-gap</div>
+            <div class="cell" accent4>Thin row-gap</div>
+            <div class="cell" accent4>Thin row-gap</div>
+            <div class="cell" accent4>Thin row-gap</div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
