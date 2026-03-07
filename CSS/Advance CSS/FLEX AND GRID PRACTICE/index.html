@@ -122,16 +122,56 @@
     <section class="section">
       <span class="tag grid">CSS GRID</span>
       <h2 class="section-title">3. Grid Template Areas</h2>
-      <p class="section-subtitle">grid-template-area • grid-area • named regions</p>
+      <p class="section-subtitle">
+        grid-template-area • grid-area • named regions
+      </p>
       <div class="demo-box">
         <div class="page-layout">
-            <div class="cell area-header">grid-area: header</div>
-            <div class="cell area-sidebar">grid-area: sidebar</div>
-            <div class="cell area-main">grid-area: main</div>
-            <div class="cell area-footer">grid-area: footer</div>
+          <div class="cell area-header">grid-area: header</div>
+          <div class="cell area-sidebar">grid-area: sidebar</div>
+          <div class="cell area-main">grid-area: main</div>
+          <div class="cell area-footer">grid-area: footer</div>
         </div>
       </div>
     </section>
-    
+    <section class="section">
+      <span class="tag grid">CSS GRID</span>
+      <h2 class="section-title">4. auto-fit, auto-fill & minmax()</h2>
+      <p class="section-subtitle">
+        repeat(auto-fit, minmax()) • repeat(auto-fill, minmax()) • responsive
+        columns
+      </p>
+      <p class="prop-label">
+        auto-fit - columns stretch to fill remaining space
+      </p>
+      <div class="demo-box">
+        <div class="grid-autofit">
+          <div class="cell accent2">auto</div>
+          <div class="cell accent2">auto</div>
+          <div class="cell accent2">auto</div>
+          <div class="cell accent2">auto</div>
+          <div class="cell accent2">auto</div>
+        </div>
+      </div>
+      <p class="prop-label">
+        auto-fill - creates as many columns as possible(may leave empty slots)
+      </p>
+      <div class="demo-box">
+        <div class="grid-autofill">
+          <div class="cell accent1">fill</div>
+          <div class="cell accent1">fill</div>
+          <div class="cell accent1">fill</div>
+        </div>
+      </div>
+
+      <p class="prop-label">minmax(min, max) - explicit column size ranges</p>
+      <div class="demo-box">
+        <div class="grid-minmax-fixed">
+          <div class="cell accent4">min:100 max:200</div>
+          <div class="cell">1fr (flexible)</div>
+          <div class="cell accent3">min:80 max:150</div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
