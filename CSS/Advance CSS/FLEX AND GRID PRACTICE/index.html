@@ -52,32 +52,70 @@
       <p class="prop-label">repeat(4,1fr) - shorthand repeat function</p>
       <div class="demo-box">
         <div class="grid-repeat">
-            <div class="cell">1</div>
-            <div class="cell">2</div>
-            <div class="cell">3</div>
-            <div class="cell">4</div>
+          <div class="cell">1</div>
+          <div class="cell">2</div>
+          <div class="cell">3</div>
+          <div class="cell">4</div>
         </div>
       </div>
-      <p class="prop-label">grid-template-row: 60px 100px - explicit row heights</p>
+      <p class="prop-label">
+        grid-template-row: 60px 100px - explicit row heights
+      </p>
       <div class="demo-box">
         <div class="grid-rows">
-            <div class="cell">60px row</div>
-            <div class="cell">60px row</div>
-            <div class="cell">60px row</div>
-            <div class="cell">100px row</div>
-            <div class="cell">100px row</div>
-            <div class="cell">100px row</div>
+          <div class="cell">60px row</div>
+          <div class="cell">60px row</div>
+          <div class="cell">60px row</div>
+          <div class="cell">100px row</div>
+          <div class="cell">100px row</div>
+          <div class="cell">100px row</div>
         </div>
       </div>
-      <p class="prop-label">column-gap: 30px • row-gap: 8px - independent gaps</p>
+      <p class="prop-label">
+        column-gap: 30px • row-gap: 8px - independent gaps
+      </p>
       <div class="demo-box">
         <div class="grid-col-gap">
-            <div class="cell" accent4>Wide col-gap</div>
-            <div class="cell" accent4>Wide col-gap</div>
-            <div class="cell" accent4>Wide col-gap</div>
-            <div class="cell" accent4>Thin row-gap</div>
-            <div class="cell" accent4>Thin row-gap</div>
-            <div class="cell" accent4>Thin row-gap</div>
+          <div class="cell" accent4>Wide col-gap</div>
+          <div class="cell" accent4>Wide col-gap</div>
+          <div class="cell" accent4>Wide col-gap</div>
+          <div class="cell" accent4>Thin row-gap</div>
+          <div class="cell" accent4>Thin row-gap</div>
+          <div class="cell" accent4>Thin row-gap</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPANNING (GRID-COLUMN / GRID-ROW / SPAN) -->
+    <section class="section">
+      <span class="tag grid">CSS GRID</span>
+      <h2 class="section-title">2. Column & Row Spanning</h2>
+      <p class="section-subtitle">
+        grid-column • grid-row • span keyword • line numbers
+      </p>
+
+      <p class="prop-label">grid-column: span 2</p>
+      <div class="demo-box">
+        <div class="grid-span-demo">
+          <div class="cell accent1 span-col-2">span 2 columns</div>
+          <div class="cell">C</div>
+          <div class="cell">D</div>
+          <div class="cell">E</div>
+          <div class="cell">F</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        grid-row: 1/3 and grid-column: 2/-1 with line numbers
+      </p>
+      <div class="demo-box">
+        <div class="grid-span-rows">
+          <div class="cell accent3 row-1-3">row 1→3<br>(2 rows tall)</div>
+          <div class="cell accent4 col1-2-end">col 2→end<br>(row 1)</div>
+          <div class="cell">C</div>
+          <div class="cell">D</div>
+          <div class="cell accent1 col-1-3">col 1→3</div>
+          <div class="cell">F</div>
         </div>
       </div>
     </section>
