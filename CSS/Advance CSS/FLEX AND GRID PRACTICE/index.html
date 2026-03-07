@@ -173,5 +173,82 @@
         </div>
       </div>
     </section>
+
+    <!-- GRID ALIGNMENT -->
+    <section class="section">
+      <span class="tag grid">CSS GRID</span>
+      <h2 class="section-title">5. Grid Alignment</h2>
+      <p class="section-subtitle">
+        justify-items • align-items • justify-content • align-content •
+        justify-self • align-self
+      </p>
+      <p class="prop-label">
+        justify-content: center + align-content: center - center the whole grid
+        in its container
+      </p>
+      <div
+        class="demo-box"
+        style="
+          min-height: 260px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div class="grid-align-container">
+          <div class="cell">1</div>
+          <div class="cell">2</div>
+          <div class="cell">3</div>
+          <div class="cell">4</div>
+          <div class="cell">5</div>
+          <div class="cell">6</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        justify-items: center - centers each item inside its cell (horizontal)
+      </p>
+      <div class="demo-box">
+        <div class="grid-justify-items-center">
+          <div class="cell" style="70%">70% wide</div>
+          <div class="cell" style="50%">50% wide</div>
+          <div class="cell" style="80%">80% wide</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        align-items: end - items snap to the bottom of each cell (vertical)
+      </p>
+      <div class="demo-box">
+        <div class="grid-align-items-end">
+          <div class="cell" style="height: 40px">short</div>
+          <div class="cell" style="height: 60px">medium</div>
+          <div class="cell" style="height: 30px">tiny</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        justify-self &amp;; align-self - per-item positioning
+      </p>
+      <div class="demo-box">
+        <div class="grid-self-demo">
+          <div
+            class="cell accent1 self-start"
+            style="height: 60px; width: 80px"
+          >
+            justify-self: start
+          </div>
+          <div
+            class="cell accent2 self-center"
+            style="height: 60px; width: 80px"
+          >
+            justify-self: center
+          </div>
+          <div class="cell accent4 self-end" style="height: 60px; width: 80px">
+            justify-self: end
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
