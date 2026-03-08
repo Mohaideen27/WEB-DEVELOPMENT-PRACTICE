@@ -425,18 +425,121 @@
           <div class="cell">C</div>
         </div>
       </div>
-      <div><p class="prop-label">space-around</p>
-      <div class="jc-around">
-        <div class="cell">A</div>
-        <div class="cell">B</div>
-        <div class="cell">C</div>
-      </div></div>
-      <div><p class="prop-label">space-evenly</p>
-      <div class="jc-evenly">
-        <div class="cell">A</div>
-        <div class="cell">B</div>
-        <div class="cell">C</div>
-      </div></div>
+      <div>
+        <p class="prop-label">space-around</p>
+        <div class="jc-around">
+          <div class="cell">A</div>
+          <div class="cell">B</div>
+          <div class="cell">C</div>
+        </div>
+      </div>
+      <div>
+        <p class="prop-label">space-evenly</p>
+        <div class="jc-evenly">
+          <div class="cell">A</div>
+          <div class="cell">B</div>
+          <div class="cell">C</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALIGN-ITEMS & ALIGN-CONTENT -->
+
+    <section class="section">
+      <span class="tag flex">FLEXBOX</span>
+      <h2 class="section-title">align-itms & align-content</h2>
+      <p class="section-subtitle">
+        stretch • flex-start • flex-end • center • baseline (align-items) • same
+        values + space-between/around (align-content)
+      </p>
+      <div
+        class="demo-box"
+        style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+      >
+        <div>
+          <p class="prop-label">align-items: stretch (default)</p>
+          <div class="ai-demo ai-stretch">
+            <div class="cell accent2">A</div>
+            <div class="cell accent2">B</div>
+            <div class="cell accent2">C</div>
+          </div>
+        </div>
+        <div>
+          <p class="prop-label">align-items: flex-start</p>
+          <div class="ai-demo ai-stretch">
+            <div class="cell accent2">A</div>
+            <div class="cell accent2">B</div>
+            <div class="cell accent2">C</div>
+          </div>
+        </div>
+        <div>
+          <p class="prop-label">align-items: flex-end</p>
+          <div class="ai-demo ai-end">
+            <div class="cell accent1">A</div>
+            <div class="cell accent1">B</div>
+            <div class="cell accent1">C</div>
+          </div>
+        </div>
+        <div>
+          <p class="prop-label">align-items: center</p>
+          <div class="ai-demo ai-center">
+            <div class="cell accent3">A</div>
+            <div class="cell accent3">B</div>
+            <div class="cell accent3">C</div>
+          </div>
+        </div>
+        <div>
+          <p class="prop-label">align-items: baseline</p>
+          <div class="ai-demo ai-baseline">
+            <div class="cell" style="font-size: 0.6em; padding: 4px 8px">
+              small
+            </div>
+            <div class="cell" style="font-size: 1.4em; padding: 4px 8px">
+              BIG
+            </div>
+            <div class="cell" style="font-size: 0.9em; padding: 4px 8px">
+              mid
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p class="prop-label">
+        align-content - controls spacing of wrapped rows (needs flex-wrap:wrap +
+        fixed height)
+      </p>
+      <div
+        class="demo-box"
+        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px"
+      >
+        <div>
+          <p class="prop-label">ac: flex-start</p>
+          <div class="ac-demo ac-start">
+            <div class="cell flex-item-fixed">1</div>
+            <div class="cell flex-item-fixed">2</div>
+            <div class="cell flex-item-fixed">3</div>
+            <div class="cell flex-item-fixed">4</div>
+          </div>
+        </div>
+        <div>
+          <p class="prop-label">ac: center</p>
+          <div class="ac-demo ac-center">
+            <div class="cell flex-item-fixed accent2">1</div>
+            <div class="cell flex-item-fixed accent2">2</div>
+            <div class="cell flex-item-fixed accent2">3</div>
+            <div class="cell flex-item-fixed accent2">4</div>
+          </div>
+        </div>
+        <div>
+          <p class="prop-label">ac: space-between</p>
+          <div class="ac-demo ac-between">
+            <div class="cell flex-item-fixed accent1">1</div>
+            <div class="cell flex-item-fixed accent1">2</div>
+            <div class="cell flex-item-fixed accent1">3</div>
+            <div class="cell flex-item-fixed accent1">4</div>
+          </div>
+        </div>
+      </div>
     </section>
     
   </body>
