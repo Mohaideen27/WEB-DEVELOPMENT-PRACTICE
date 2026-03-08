@@ -250,5 +250,141 @@
         </div>
       </div>
     </section>
+
+    <!-- IMPLICIT GRID -->
+    <section class="section">
+      <span class="tag grid">CSS GRID</span>
+      <h2 class="section-title">Implicit Grid</h2>
+      <p class="section-subtitle">
+        grid-auto-rows • grid-auto-columns • grid-auto-flow (row | column |
+        dense)
+      </p>
+      <p class="prop-label">
+        grid-auto-rows: 70px - auto-created rows all have same height
+      </p>
+      <div class="demo-box">
+        <div class="grid-auto-rows">
+          <div class="cell">1</div>
+          <div class="cell">2</div>
+          <div class="cell">3</div>
+          <div class="cell">4</div>
+          <div class="cell">5</div>
+          <div class="cell">6</div>
+          <div class="cell">7</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        grid-auto-flow: dense - fills in holes left by spanning items
+      </p>
+      <div class="demo-box">
+        <div class="grid-dense">
+          <div class="cell accent1 span-col-2">span 2</div>
+          <div class="cell">2</div>
+          <div class="cell">3</div>
+          <div class="cell accent3 span-col-2">span 2</div>
+          <div class="cell">5</div>
+          <div class="cell">6</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLEXBOX - BASICS & FLEX-DIRECTION -->
+
+    <section class="section">
+      <span class="tag flex">FLEXBOX</span>
+      <h2 class="section-title">Flexbox basics & flex-direction</h2>
+      <p class="section-subtitle">
+        display:flex • flex-direction: row | row-reverse | column |
+        column-reverse
+      </p>
+      <p class="prop-label">flex-direction: row (default)</p>
+      <div class="demo-box">
+        <div class="flex-row">
+          <div class="cell accent4">One</div>
+          <div class="cell accent4">Two</div>
+          <div class="cell accent4">Three</div>
+        </div>
+      </div>
+
+      <p class="prop-label">flex-direction: column</p>
+      <div class="demo-box">
+        <div class="flex-col" style="max-width: 200px">
+          <div class="cell accent2">Top</div>
+          <div class="cell accent2">Middle</div>
+          <div class="cell accent2">Bottom</div>
+        </div>
+      </div>
+
+      <p class="prop-label">flex-direction: column-reverse</p>
+      <div class="demo-box">
+        <div class="flex-col-rev" style="max-width: 200px">
+          <div class="cell accent3">Top</div>
+          <div class="cell accent3">Middle</div>
+          <div class="cell accent3">Bottom</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLEX-WRAP & FLEX-FLOW -->
+
+    <section class="section">
+      <span class="tag flex">FLEXBOX</span>
+      <h2 class="section-title">flex-wrap & flex-flow</h2>
+      <p class="section-subtitle">
+        nowrap • wrap • wrap-reverse • flex-flow shorthand
+      </p>
+
+      <p class="prop-label">flex-wrap: nowrap - items overflow (scroll)</p>
+      <div class="demo-box">
+        <div class="flex-nowrap">
+          <div class="cell flex-item-fixed">A</div>
+          <div class="cell flex-item-fixed">B</div>
+          <div class="cell flex-item-fixed">C</div>
+          <div class="cell flex-item-fixed">D</div>
+          <div class="cell flex-item-fixed">E</div>
+          <div class="cell flex-item-fixed">F</div>
+        </div>
+      </div>
+
+      <p class="prop-label">flex-wrap: wrap - items wrap to next line</p>
+      <div class="demo-box">
+        <div class="flex-wrap">
+          <div class="cell flex-item-fixed accent2">A</div>
+          <div class="cell flex-item-fixed accent2">B</div>
+          <div class="cell flex-item-fixed accent2">C</div>
+          <div class="cell flex-item-fixed accent2">D</div>
+          <div class="cell flex-item-fixed accent2">E</div>
+          <div class="cell flex-item-fixed accent2">F</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        flex-wrap: wrap-reverse - wrapped lines appear above
+      </p>
+      <div class="demo-box">
+        <div class="flex-wrap-rev">
+          <div class="cell flex-item-fixed accent1">A</div>
+          <div class="cell flex-item-fixed accent1">B</div>
+          <div class="cell flex-item-fixed accent1">C</div>
+          <div class="cell flex-item-fixed accent1">E</div>
+          <div class="cell flex-item-fixed accent1">D</div>
+          <div class="cell flex-item-fixed accent1">F</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        flex-flow : row wrap - shorthand for direction + wrap
+      </p>
+      <div class="demo-box">
+        <div class="flex-flow-demo">
+          <div class="cell flex-item-fixed accent4">1</div>
+          <div class="cell flex-item-fixed accent4">2</div>
+          <div class="cell flex-item-fixed accent4">3</div>
+          <div class="cell flex-item-fixed accent4">4</div>
+          <div class="cell flex-item-fixed accent4">5</div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
