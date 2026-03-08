@@ -541,6 +541,88 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- FLEX ITEM PROPERTIES-
+    order, flex-grow, flex-shrik, flex, align-self -->
+
+    <section class="section">
+      <span class="tag flex">FLEXBOX</span>
+      <h2 class="section-title">Flex Item Properties</h2>
+      <p class="section-subtitle">
+        order • flex-grow • flex-shrink • flex-basis • flex shorthand •
+        align-self
+      </p>
+      <p class="prop-label">
+        order - rearranges visual order (HTML order: 1,2,3,4 → visual:4,2,3,1)
+      </p>
+      <div class="demo-box">
+        <div class="order-box">
+          <div class="cell order-3">HTML:1 | order:3</div>
+          <div class="cell order-1">HTML:2 | order:1</div>
+          <div class="cell order-2">HTML:3 | order:2</div>
+          <div class="cell order-neg">HTML:4 | order:-1 ← goes first</div>
+        </div>
+      </div>
+      <p class="prop-label">
+        flex-grow - distributes leftover space (0=no grow, 1=equal, 2=double,
+        3=triple)
+      </p>
+      <div class="demo-box">
+        <div class="flex-items-demo">
+          <div class="cell grow-0">grow:0</div>
+          <div class="cell accent2 grow-1">grow:1</div>
+          <div class="cell accent1 grow-2">grow:2</div>
+          <div class="cell accent4 grow-3">grow:3</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        flex-shrink - controls how items shrink when container is too small(0=no
+        shrink)
+      </p>
+      <div class="demo-box" style="overflow: hidden">
+        <div style="display: flex; gap: 8px; max-width: 400px">
+          <div class="cell shrink-0">shrink:0 (160px)</div>
+          <div class="cell accent2 shrink-1">shrink:1 (160px)</div>
+          <div class="cell accent1 shrink-3">shrink:3 (shrinks fastest)</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        flex-basis - initial main-size before grow/shrink is applied
+      </p>
+      <div class="demo-box">
+        <div class="flex-items-demo">
+          <div class="cell basis-auto">basis: auto</div>
+          <div class="cell accent3 basis-100">basis: 100px</div>
+          <div class="cell accent2 basis-200">basis: 200px</div>
+        </div>
+      </div>
+
+      <p class="prop-label">
+        flex shorthand(grow shrink basis) - flex:1 • flex:2 • flex:none • flex:1
+        1 auto
+      </p>
+      <div class="demo-box">
+        <div class="flex-items-demo">
+          <div class="cell accent4 flex-1">flex-1</div>
+          <div class="cell accent2 flex-2">flex-2</div>
+          <div class="cell accent3 flex-none">flex:none</div>
+          <div class="cell accent1 flex-auto">flex:1 1 auto</div>
+        </div>
+      </div>
+      <p class="prop-label">
+        align-self - overrides container's align-items for individual items
+      </p>
+      <div class="demo-box">
+        <div class="as-demo">
+          <div class="cell as-start">flex-start</div>
+          <div class="cell accent2 as-center">center</div>
+          <div class="cell accent1 as-end">flex-end</div>
+          <div class="cell accent4 as-stretch">stretch</div>
+          <div class="cell as-baseline" style="font: size 1.2rem">baseline</div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
