@@ -192,3 +192,37 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
     align-self: flex-end;
     max-width: 400px;
 }
+
+/* GRID BASICS */
+.grid-basic-3col{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.grid-basic-mixed{
+    display: grid;
+    grid-template-columns: 200px 1fr 2fr;
+    gap: 12px;
+}
+
+.grid-repeat{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.grid-rows{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px 100px;
+    gap: 12px;
+}
+
+.grid-col-row-gap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 8px;
+}
+
