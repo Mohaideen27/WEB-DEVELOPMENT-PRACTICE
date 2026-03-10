@@ -504,7 +504,7 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
   border-radius: var(--radius);
 }
 
-.jc-evenly{
+.jc-evenly {
   display: flex;
   justify-content: space-evenly;
   border: var(--border);
@@ -514,7 +514,7 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
 
 /* ALIGN-ITEMS & ALIGN CONTENT */
 
-.ai-demo{
+.ai-demo {
   display: flex;
   height: 120px;
   gap: 8px;
@@ -524,27 +524,27 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
   background: var(--cream);
 }
 
-.ai-stretch{
+.ai-stretch {
   align-items: stretch;
 }
 
-.ai-start{
+.ai-start {
   align-items: flex-start;
 }
 
-.ai-end{
+.ai-end {
   align-items: flex-end;
 }
 
-.ai-center{
+.ai-center {
   align-items: center;
 }
 
-.ai-baseline{
+.ai-baseline {
   align-items: baseline;
 }
 
-.ac-demo{
+.ac-demo {
   display: flex;
   flex-wrap: wrap;
   height: 200px;
@@ -555,25 +555,158 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
   background: var(--cream);
 }
 
-.ac-start{
+.ac-start {
   align-content: flex-start;
 }
 
-.ac-end{
+.ac-end {
   align-content: flex-end;
 }
-.ac-center{
+.ac-center {
   align-content: center;
 }
 
-.ac-between{
+.ac-between {
   align-content: space-between;
 }
 
-.ac-around{
+.ac-around {
   align-content: space-around;
 }
 
-.ac-stretch{
+.ac-stretch {
   align-content: stretch;
+}
+
+/* FLEX ITEM PROPERTIES */
+
+.flex-items-demo {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.order-demo {
+  display: flex;
+  gap: 10px;
+}
+
+/* ORDER */
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+.order-neg {
+  order: -1;
+  background: var(--accent3) !important;
+}
+
+/* FLEX-GROW */
+.grow-0 {
+  flex-grow: 0;
+  min-width: 80px;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+.grow-3 {
+  flex-grow: 3;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+  width: 160px;
+}
+
+.shrink-1 {
+  flex-shrink: 1;
+  width: 160px;
+}
+.shrink-3 {
+  flex-shrink: 3;
+  width: 160px;
+}
+
+/* FLEX-BASIS */
+.basis-auto {
+  flex-basis: auto;
+}
+
+.basis-100 {
+  flex-basis: 100px;
+}
+
+.basis-200 {
+  flex-basis: 200px;
+}
+
+.basis-0 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+/* FLEX SHORTHAND: GROW SHRINK BASIS */
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-none {
+  flex: none;
+  width: 90px;
+}
+
+/* ALIGN-SELF */
+
+.as-demo {
+  display: flex;
+  height: 140px;
+  gap: 10px;
+  background: var(--cream);
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+
+.as-auto {
+  align-self: auto;
+}
+
+.as-start {
+  align-self: flex-start;
+}
+
+.as-end {
+  align-self: flex-end;
+}
+
+.as-center {
+  align-self: center;
+}
+
+.as-stretch {
+  align-self: stretch;
+}
+
+.as-baseline {
+  align-self: baseline;
 }
