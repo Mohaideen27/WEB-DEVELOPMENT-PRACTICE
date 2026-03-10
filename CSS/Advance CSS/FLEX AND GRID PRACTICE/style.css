@@ -511,3 +511,69 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
   padding: 10px;
   border-radius: var(--radius);
 }
+
+/* ALIGN-ITEMS & ALIGN CONTENT */
+
+.ai-demo{
+  display: flex;
+  height: 120px;
+  gap: 8px;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.ai-stretch{
+  align-items: stretch;
+}
+
+.ai-start{
+  align-items: flex-start;
+}
+
+.ai-end{
+  align-items: flex-end;
+}
+
+.ai-center{
+  align-items: center;
+}
+
+.ai-baseline{
+  align-items: baseline;
+}
+
+.ac-demo{
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  gap: 8px;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.ac-start{
+  align-content: flex-start;
+}
+
+.ac-end{
+  align-content: flex-end;
+}
+.ac-center{
+  align-content: center;
+}
+
+.ac-between{
+  align-content: space-between;
+}
+
+.ac-around{
+  align-content: space-around;
+}
+
+.ac-stretch{
+  align-content: stretch;
+}
