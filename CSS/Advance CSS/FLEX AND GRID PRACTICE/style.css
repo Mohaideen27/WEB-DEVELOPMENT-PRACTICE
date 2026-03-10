@@ -429,3 +429,33 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
   gap: 10px;
 }
 
+/* FLEX-WRAP & FLEX-FLOW */
+
+.flex-nowrap{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.flex-wrap-rev{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 8px;
+}
+
+.flex-flow-demo{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+}
+
+.flex-item-fixed{
+  min-width: 100px;
+}
