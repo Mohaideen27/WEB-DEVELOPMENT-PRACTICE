@@ -423,7 +423,7 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
   gap: 10px;
 }
 
-.flex-col-rev{
+.flex-col-rev {
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
@@ -431,31 +431,83 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
 
 /* FLEX-WRAP & FLEX-FLOW */
 
-.flex-nowrap{
+.flex-nowrap {
   display: flex;
   flex-wrap: nowrap;
   gap: 8px;
   overflow-x: auto;
 }
 
-.flex-wrap{
+.flex-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.flex-wrap-rev{
+.flex-wrap-rev {
   display: flex;
   flex-wrap: wrap-reverse;
   gap: 8px;
 }
 
-.flex-flow-demo{
+.flex-flow-demo {
   display: flex;
   flex-flow: row wrap;
   gap: 8px;
 }
 
-.flex-item-fixed{
+.flex-item-fixed {
   min-width: 100px;
+}
+
+/* JUSTIFY-CONTENT */
+
+.jc-start {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+
+.jc-end {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+
+.jc-center {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+.jc-between {
+  display: flex;
+  justify-content: space-between;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+
+.jc-around {
+  display: flex;
+  justify-content: space-around;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+
+.jc-evenly{
+  display: flex;
+  justify-content: space-evenly;
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--radius);
 }
