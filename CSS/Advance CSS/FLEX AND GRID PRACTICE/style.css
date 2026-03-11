@@ -932,3 +932,41 @@ GRID-TEMPLATE-AREAS, GAP, ALIGN-ITEMS(GRID) */
   font-size: 0.65rem;
   font-family: "Courier New", Courier, monospace;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas: "badge" "title" "desc";
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header" "sidebar"
+      "main" "footer";
+  }
+
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav-top" "content";
+  }
+}
+
+.app-sidebar {
+  display: none;
+}
+
+.cheatsheet {
+  grid-template-columns: 1fr;
+}
+
+.app-card.wide {
+  grid-column: span 1;
+  flex-direction: column;
+}
+
+.section {
+  padding: 40px 20px;
+}
