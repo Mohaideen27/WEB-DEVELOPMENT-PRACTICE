@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS OBJECT-FIT AND OBJECT-COVER</title>
+    <style>
+            * {
+              margin: 0;
+              padding: 0px;
+              justify-items: center;
+              /* align-items: center; */
+            }
+            .container {
+              margin: 50px;
+              padding: 40px;
+              background: bisque;
+              /* box-sizing: border-box;
+              margin: 0; */
+              /* padding: 30px; */
+              border: 2px dashed rgb(42, 42, 42);
+              height: 80vh;
+              width: 60vw;
+            }
+            .box {
+              height: 400px;
+              width: 400px;
+              border: 2px dashed rebeccapurple;
+              background-position: center;
+              /* background-clip: border-box; */
+              background-image: url(IMG_20221028_103329-02.jpeg);
+            }
+
+            .clip{
+                background-clip: content-box;
+
+            }
+
+            /* img {
+              width: 400px;
+              height: 400px;
+              object-fit: contain;
+            } */
+
+            /* img {
+              width: 400px;
+              height: 400px;
+              object-fit: contain;
+              object-position: 20px 70px;
+              object-position: bottom center;
+            } */
+            /* img {
+              width: 400px;
+              height: 400px;
+              object-fit: scale-down;
+              object-position: bottom center;
+            } */
+            /* img {
+              width: 400px;
+              height: 400px;
+              object-fit: fit;
+              object-position: bottom center;
+            } */
+      /*
+            img {
+              width: 400px;
+              height: 400px;
+              object-fit: cover;
+              object-position: bottom center;
+            } */
+            /* img {
+              width: 400px;
+              height: 400px;
+              object-fit: cover;
+            } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box clip">
+        HI I AM SAMEER
+        <!-- <img src="IMG_20221028_103329-02.jpeg" alt="PROFILE_IMG" /> -->
+      </div>
+    </div>
+  </body>
+</html>
