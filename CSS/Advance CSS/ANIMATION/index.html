@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS ANIMATION</title>
+    <style>
+      .container {
+        background-color: rgb(129, 234, 234);
+        height: 80vh;
+        width: 30vw;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: azure;
+        border-radius: 50%;
+        /* animation-name: animation;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+        animation-timing-function: cubic-bezier(1, 0.93, 0.11, 0.26);
+        animation-direction: alternate-reverse;
+        animation-play-state: paused; */
+        animation:
+          animation 3s ease-in-out infinite reverse,
+          ani2 3s ease-out 2s infinite;
+      }
+
+      @keyframes animation {
+        from {
+        }
+        to {
+          transform: translateX(100px);
+        }
+      }
+
+      @keyframes ani2 {
+        0% {
+          transform: rotate(0.25turn);
+        }
+        20% {
+          transform: rotate(0.5turn);
+        }
+        50% {
+          transform: rotate(0.75turn);
+        }
+        100% {
+          transform: rotate(0.95turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">BOX</div>
+    </div>
+  </body>
+</html>
