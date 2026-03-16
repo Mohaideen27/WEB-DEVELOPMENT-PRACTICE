@@ -39,52 +39,146 @@
             id="hamburger-btn"
             aria-label="Toggle navigation"
             aria-expanded="false"
-          >&#9776;</button>
+          >
+            &#9776;
+          </button>
         </div>
       </nav>
     </header>
 
-        <section id="hero" aria-labelledby="hero-heading">
-      <div class="container">
-        <div class="hero-grid">
+    <!-- ------------------------------------------------------------------ -->
+    <main>
+      <section id="hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- HTML INLINE & BLOCK: <div> is a block element — contains hero text -->
+            <div class="hero-text">
+              <!-- HTML BASIC TAGS: <span> is an inline element used for small label -->
+              <span class="hero-eyebrow">&#127775; Available for Work</span>
+              <!-- HTML MISC: HTML Entity — &#127775; renders ✧ -->
 
-          <!-- HTML INLINE & BLOCK: <div> is a block element — contains hero text -->
-          <div class="hero-text">
+              <!-- HTML BASIC TAGS: Heading Tags — h1 is the main page heading -->
+              <h1 class="hero-name" id="hero-heading">
+                Hello, I&#39;m
+                <!-- HTML Entity: &#39; = apostrophe -->
+                <span>Alex Rivera</span>
+              </h1>
 
-            <!-- HTML BASIC TAGS: <span> is an inline element used for small label -->
-            <span class="hero-eyebrow">&#127775; Available for Work</span>
-            <!-- HTML MISC: HTML Entity — &#127775; renders ✧ -->
+              <!-- HTML BASIC TAGS: <h2> — secondary heading for role -->
+              <h2
+                style="
+                  font-size: 1.1rem;
+                  color: var(--clr-muted);
+                  font-weight: 400;
+                  margin-bottom: 1rem;
+                "
+              >
+                <!-- HTML Introduction: Inline style attribute (also demonstrates inline CSS) -->
+                Full&ndash;Stack Developer &amp; UI Designer
+                <!-- HTML Entities: &ndash; = –, &amp; = & -->
+              </h2>
 
-            <!-- HTML BASIC TAGS: Heading Tags — h1 is the main page heading -->
-            <h1 class="hero-name" id="hero-heading">
-              Hello, I&#39;m <!-- HTML Entity: &#39; = apostrophe -->
-              <span>Alex Rivera</span>
-            </h1>
+              <!-- HTML BASIC TAGS: Paragraph tag <p> -->
+              <p class="hero-tagline">
+                I craft fast, accessible, and beautiful web experiences.
+                Passionate about clean code, elegant design, and continuous
+                learning.
+              </p>
 
-            <!-- HTML BASIC TAGS: <h2> — secondary heading for role -->
-            <h2 style="font-size:1.1rem; color:var(--clr-muted); font-weight:400; margin-bottom:1rem;">
-              <!-- HTML Introduction: Inline style attribute (also demonstrates inline CSS) -->
-              Full&ndash;Stack Developer &amp; UI Designer
-              <!-- HTML Entities: &ndash; = –, &amp; = & -->
-            </h2>
-
-            <!-- HTML BASIC TAGS: Paragraph tag <p> -->
-            <p class="hero-tagline">
-              I craft fast, accessible, and beautiful web experiences.
-              Passionate about clean code, elegant design, and continuous learning.
-            </p>
-
-            <!-- HTML INLINE & BLOCK: <div> is block, <a> is inline -->
-            <div class="hero-btns">
-              <!-- HTML BASIC TAGS: Anchor tag with href, target, rel attributes -->
-              <a href="#projects" class="btn btn-primary">View My Work</a>
-              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-              <!-- Download attribute on anchor — HTML Forms / More on Forms -->
-              <a href="#" class="btn btn-secondary" download title="Download CV">
-                &#8595; Download CV <!-- HTML Entity: &#8595; = ↓ -->
-              </a>
+              <!-- HTML INLINE & BLOCK: <div> is block, <a> is inline -->
+              <div class="hero-btns">
+                <!-- HTML BASIC TAGS: Anchor tag with href, target, rel attributes -->
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <!-- Download attribute on anchor — HTML Forms / More on Forms -->
+                <a
+                  href="#"
+                  class="btn btn-secondary"
+                  download
+                  title="Download CV"
+                >
+                  &#8595; Download CV
+                  <!-- HTML Entity: &#8595; = ↓ -->
+                </a>
+              </div>
             </div>
+            <div class="hero-image-wrap">
+              <!-- HTML MISC: <figure> semantic element wrapping an image -->
+              <figure>
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  alt="Alex Rivera — Full-Stack Developer profile photo"
+                  width="320"
+                  height="320"
+                  class="hero-avatar"
+                  loading="eager"
+                  title="Alex Rivera"
+                />
+                <!-- HTML MISC: <figcaption> — caption for the figure -->
+                <figcaption class="sr-only">
+                  Profile photograph of Alex Rivera
+                </figcaption>
+              </figure>
 
+              <!-- CSS ADVANCED: 3D Transform demo — rotating cube -->
+              <div
+                class="cube-scene"
+                style="position: absolute; bottom: 2rem; right: 4rem"
+                aria-hidden="true"
+              >
+                <div class="cube">
+                  <div class="cube-face front">⚡</div>
+                  <div class="cube-face back">🚀</div>
+                  <div class="cube-face left">💡</div>
+                  <div class="cube-face right">🎨</div>
+                  <div class="cube-face top">✨</div>
+                  <div class="cube-face bottom">🔥</div>
+                </div>
+              </div>
+            </div>
+            <!-- /hero-image-wrap -->
           </div>
+          <!-- /hero-grid -->
+        </div>
+      </section>
+
+          <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 class="section-title" id="about-heading">About Me</h2>
+        <p class="section-subtitle">A little bit about who I am and what I do</p>
+
+        <!-- CSS LAYOUT: CSS Grid — about-grid splits into two columns -->
+        <div class="about-grid">
+
+          <!-- LEFT: Quick-facts card + float demo -->
+          <div class="about-card">
+            <!-- HTML BASIC TAGS: Image Tag — used again to show reuse of concepts -->
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=300&fit=crop"
+              alt="Laptop showing code on screen"
+              loading="lazy"
+            />
+
+            <!-- HTML LISTS: Definition List <dl><dt><dd> -->
+            <dl class="about-dl">
+              <dt>Full Name</dt>
+              <dd>Alex Rivera</dd>
+
+              <dt>Location</dt>
+              <dd>San Francisco, CA &mdash; USA</dd>
+              <!-- HTML Entity: &mdash; = — -->
+
+              <dt>Experience</dt>
+              <dd>6&plus; Years <!-- HTML Entity: &plus; = + --></dd>
+
+              <dt>Education</dt>
+              <!-- HTML MISC: <abbr> — abbreviation with tooltip -->
+              <dd><abbr title="Bachelor of Science">B.Sc.</abbr> Computer Science, MIT</dd>
+
+              <dt>Availability</dt>
+              <dd>Open to full-time &amp; freelance</dd>
+            </dl>
+          </div>
+    </main>
   </body>
 </html>

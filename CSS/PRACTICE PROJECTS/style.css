@@ -81,6 +81,8 @@ body {
   cursor: pointer;
 }
 
+/* --------------------------------- */
+
 section {
   padding: 5rem 2rem;
 }
@@ -119,6 +121,38 @@ section {
   font-size: 1.05rem;
   margin-bottom: 3rem;
   margin-top: 0.4rem;
+}
+
+#hero {
+  min-height: 100vh; /* CSS INTERMEDIATE: Units — vh (viewport height) */
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-bg);
+  background-image:
+    radial-gradient(
+      ellipse 60% 50% at 70% 50%,
+      rgba(124, 106, 240, 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 40% at 20% 20%,
+      rgba(232, 201, 109, 0.08) 0%,
+      transparent 60%
+    );
+  position: relative;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  background-image:
+    linear-gradient(rgba(232, 201, 109, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 201, 109, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
 }
 
 @media (max-width: 640px) {
