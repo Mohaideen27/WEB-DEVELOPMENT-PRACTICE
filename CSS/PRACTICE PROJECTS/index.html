@@ -402,6 +402,136 @@
           </div>
         </div>
       </section>
+      <section id="media" aria-labelledby="media-heading">
+        <div class="container">
+          <h2 class="section-title" id="media-heading">
+            <span class="filter-demo">📺</span>Media Showcase
+          </h2>
+          <p class="section-subtitle">Demonstrating HTML media elements</p>
+          <div class="media-box">
+            <h3>📽️Video</h3>
+            <figure>
+              <video src="">
+                Your browser does not support the &lt; video&gt; tag
+              </video>
+              <figcaption class="media-caption">
+                ↑ HTML & &lt;video&gt; element with controls, muted, loop &amp;
+                poster attributes
+              </figcaption>
+            </figure>
+          </div>
+          <div class="media-box">
+            <h3>🔉 Audio Tag</h3>
+            <figure>
+              <audio src="" type="audio/mpeg"></audio>
+              <figcaption class="media-caption">
+                HTML &lt; audio &gt; element — plays an .mp3 file with built-in
+                controls
+              </figcaption>
+            </figure>
+            <hr style="border-color: var(--clr-border); margin: 1.25rem 0" />
+            <h3>🌏 Embedded iFrame</h3>
+            <figure>
+              <iframe src="" frameborder="0"></iframe>
+              <figcaption class="media-caption">
+                HTML &lt;iframe&gt; — embedding OpenStreetMap (San Francisco)
+              </figcaption>
+            </figure>
+          </div>
+          <div class="media-box">
+            <h3>✒️ Inline SVG</h3>
+            <div class="svg-showcase" aria-label="SVG illustration">
+              <svg
+                viewBox="0 0 200 120"
+                width="200"
+                height="120"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Abstract SVG bar chart"
+              >
+                <title>Abstract Bar Chart SVG</title>
+                <rect
+                  x="10"
+                  y="60"
+                  width="25"
+                  height="50"
+                  rx="4"
+                  fill="#e8c96d"
+                  opacity="0.85"
+                />
+                <rect
+                  x="45"
+                  y="30"
+                  width="25"
+                  height="80"
+                  rx="4"
+                  fill="#7c6af0"
+                  opacity="0.85"
+                />
+                <rect
+                  x="80"
+                  y="45"
+                  width="25"
+                  height="65"
+                  rx="4"
+                  fill="#e8c96d"
+                  opacity="0.6"
+                />
+                <rect
+                  x="115"
+                  y="15"
+                  width="25"
+                  height="95"
+                  rx="4"
+                  fill="#7c6af0"
+                  opacity="0.85"
+                />
+                <rect
+                  x="150"
+                  y="40"
+                  width="25"
+                  height="70"
+                  rx="4"
+                  fill="#e8c96d"
+                  opacity="0.85"
+                />
+                <line
+                  x1="5"
+                  y1="110"
+                  x2="195"
+                  y2="110"
+                  stroke="#2a2a40"
+                  stroke-width="2"
+                />
+                <text
+                  x="100"
+                  y="10"
+                  text-anchor="middle"
+                  fill="#8888a8"
+                  font-size="9"
+                  font-family="sans-serif"
+                >
+                  SVG Bar Chart
+                </text>
+              </svg>
+            </div>
+            <p class="media-caption" style="margin-top: 0.75rem">
+              Inline SVG — drawn directly in HTML using &lt;rect&gt;,
+              &lt;line&gt;, &lt;text&gt; elements
+            </p>
+          </div>
+          <div class="media-box">
+            <h3>🖼️ Responsive Image</h3>
+            <figure>
+              <img src="" alt="" />
+              <figcaption class="media-caption">
+                &lt;img&gt; with loading=&quot; lazy &quot;, width, height &amp;
+                descriptive alt text
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
