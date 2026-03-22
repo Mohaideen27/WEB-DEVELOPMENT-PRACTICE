@@ -564,6 +564,39 @@
           </div>
         </div>
       </section>
+      <section id="codesnippet" aria-labelledby="code-heading">
+        <div class="container">
+          <h2 class="section-title" id="code-heading">
+            Code &amp; Misc Elements
+          </h2>
+          <p class="section-subtitle">
+            Showcasing &lt;code&gt;, &lt;pre&gt;, &lt;details&gt;, entities, and
+            global attributes
+          </p>
+          <div
+            style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem"
+          >
+            <div>
+              <p style="">
+                Use the <code>fetch()</code> API to make HTTP requests.
+                Here&#39;s a quick example:
+              </p>
+              <pre
+                class="code-block"
+              ><code><span class="cm">// HTML MISC: &lt;code&gt;tag — code snippet</span>
+              <span class="kw">async function</span>
+            <span class="fn">fetchUser</span>(id){
+              <span class="kw">await</span><span class="fn">fetch</span>(
+                <span class="str">`https://api.example.com/users/ <span class="num">${id}</span>`</span>
+              );
+            <span class="kw">const</span>data= <span class="kw">await</span>res.<span class="fn">json</span>();<span class="kw">return</span>data;
+            }
+          <span class="cm">//HTML Entities used in output</span>
+        <span class="cm">// &amp;lt; &amp;gt; &amp;nbsp; &amp;copy; &amp;mdash;</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
