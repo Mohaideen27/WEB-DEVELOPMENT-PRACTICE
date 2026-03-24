@@ -791,19 +791,305 @@
                 </li>
               </ul>
             </div>
-            <form class="contact-form" action="" method="POST" id="contact-form"
-            novalidate aria-label="Contactform">
-          <fieldset>
-            <legend>Personal Info</legend>
-            <div class="form-group">
-              <label for="full-name">
-                <span style="color: #ef4444;">*</span>
-              </label>
-              <input type="text" id="full-name"
-              name="fullName"
-              placeholder="">
-            </div>
-          </fieldset></form>
+            <form
+              class="contact-form"
+              action=""
+              method="POST"
+              id="contact-form"
+              novalidate
+              aria-label="Contactform"
+            >
+              <fieldset>
+                <legend>Personal Info</legend>
+                <div class="form-group">
+                  <label for="full-name"
+                    >Full Name
+                    <span style="color: #ef4444">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="fullName"
+                    placeholder="eg. Sameer"
+                    minlength="2"
+                    maxlength="60"
+                    autocomplete="name"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"
+                    >Email Address
+                    <span style="color: #ef4444">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="sameer17@gmail.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                  />
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                  "
+                >
+                  <div class="form-group" style="margin-bottom: 0">
+                    <label for="phone">Phone</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="9823899833"
+                      pattern="[+]? [0-9\s\-\(\)] {7,15}"
+                      autocomplete="tel"
+                    />
+                  </div>
+                  <div class="form-group" style="margin-bottom: 0">
+                    <label for="website">Your Website</label>
+                    <input
+                      type="url"
+                      id="website"
+                      name="website"
+                      placeholder="https://yoursite.com"
+                      autocomplete="url"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Project Details</legend>
+                <div class="form-group">
+                  <label for="project-type">
+                    Project Type
+                    <span style="color: #ef4444">*</span>
+                  </label>
+                  <select
+                    name="projectType"
+                    id="project-type"
+                    required
+                    aria-required="true"
+                  >
+                    <option value="" disabled selected>
+                      Choose a project type&hellip;
+                    </option>
+                    <optgroup label="Development">
+                      <option value="website">Website / Landing Page</option>
+                      <option value="webapp">Web Application</option>
+                      <option value="api">API Development</option>
+                    </optgroup>
+                    <optgroup label="Design">
+                      <option value="ui">UI/ UX Design</option>
+                      <option value="branding">Branding</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                      <option value="consulting">Consulting</option>
+                      <option value="other">Other</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="budget">Estimated Budget (INR)</label>
+                  <input
+                    type="number"
+                    id="budget"
+                    name="budget"
+                    placeholder="e.g. 50000"
+                    min="500"
+                    max="500000"
+                    step="500"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="deadline">Desired Start Date</label>
+                  <input
+                    type="date"
+                    id="deadline"
+                    name="deadline"
+                    min="2026-01-01"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message"
+                    >Message <span style="color: #ef4444">*</span></label
+                  >
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Tell me about your project, goals, and any specific requirements&hellip;"
+                    rows="5"
+                    required
+                    minlength="20"
+                    aria-required="true"
+                  ></textarea>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Preferences</legend>
+                <div class="form-group">
+                  <label>Preferred Contact Method</label>
+                  <div class="radio-group">
+                    <label>
+                      <input
+                        type="radio"
+                        name="contactMethod"
+                        value="email"
+                        checked
+                      />Email
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="contactMethod"
+                        id="phone"
+                      />Phone
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="contactMethod"
+                        value="video"
+                      />Video Call
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label> Services You&#39;re Interested In </label>
+                  <div class="checkbox-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="services"
+                        value="frontend"
+                      />Frontend Dev
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="services"
+                        value="backend"
+                      />Backend Dev
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="services"
+                        value="design"
+                      />UI/UX Design
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="services"
+                        value="consulting"
+                      />Consulting
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="urgency">Project Urgency</label>
+                  <input
+                    type="range"
+                    id="urgency"
+                    name="urgency"
+                    min="1"
+                    max="5"
+                    value="3"
+                  />
+                  <div class="range-labels">
+                    <span>Flexible</span>
+                    <span>Moderate</span>
+                    <span>Urgent</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="brand-color">Brand Colour (if applicable)</label>
+                  <div>
+                    <input
+                      type="color"
+                      id="brand-color"
+                      name="brandColor"
+                      value="#7c6af0"
+                      style="
+                        width: 50px;
+                        height: 38px;
+                        padding: 2px;
+                        cursor: pointer;
+                        background: none;
+                        border: 1px solid var(--clr-border);
+                        border-radius: 6px;
+                      "
+                    />
+                    <small style="color: var(--clr-muted); font-size: 0.82rem"
+                      >Input type=&quot;color&quot;</small
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="brief">Attach Brief / Assets (optional)</label>
+                  <input
+                    type="file"
+                    id="brief"
+                    name="brief"
+                    accept=".pdf, .doc, .docx, .zip, .png, .jpg"
+                    style="color: var(--clr-muted); padding: 0.5rem 0.75rem"
+                  />
+                  <small
+                    style="
+                      color: var(--clr-muted);
+                      font-size: 0.78rem;
+                      display: block;
+                      margin-top: 0.3rem;
+                    "
+                    >Accepted: PDF, DOC, ZIP, PNG, JPG</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label
+                    style="
+                      display: flex;
+                      align-items: flex-start;
+                      gap: 0.6rem;
+                      cursor: pointer;
+                      text-transform: none;
+                    "
+                  >
+                    <input
+                      type="checkbox"
+                      name="gdpr"
+                      required
+                      aria-required="true"
+                      style="margin-top: 2px; flex-shrink: 0"
+                    />
+                    <span style="font-size: 0.82rem; color: var(--clr-muted)"
+                      >I agree to the
+                      <a href="#" style="color: var(--clr-accent)"
+                        >Privacy Policy</a
+                      >
+                      and consent to my data being processed for contact
+                      purposes.
+                      <span style="color: #ef4444">*</span></span
+                    >
+                  </label>
+                </div>
+              </fieldset>
+              <button type="submit" class="submit-btn" id="submit-btn">
+                &#9993; Send Message
+              </button>
+
+              <input
+                type="hidden"
+                name="source"
+                value="portfolio-contact-form"
+              />
+            </form>
           </div>
         </div>
       </section>
