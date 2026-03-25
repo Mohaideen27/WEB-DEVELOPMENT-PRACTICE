@@ -4,11 +4,14 @@
   --clr-text: #e8e8f0;
   --clr-border: #2a2a40;
   --clr-accent: #e8c96d;
+  --clr-accent2: #7c6af0;
   --ff-display: "Playfair Display", serif;
   --clr-muted: #8888a8;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --clr-surface: #13131c;
   --clr-white: #ffffff;
+  --ff-display: "Playfair Display", serif;
+  --ff-code: "JetBrains Mono", monospace;
   --clr-card: #1a1a28;
   --radius-lg: 20px;
   --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.35);
