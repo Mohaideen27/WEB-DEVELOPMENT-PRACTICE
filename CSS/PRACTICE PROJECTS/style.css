@@ -322,6 +322,28 @@ section {
 .skill-tags li:hover {
   background: rgba(124, 106, 240, 0.3);
 }
+
+#experience{
+  background-color: var(--clr-bg);
+}
+
+.styled-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.styled-table thead{
+  background: linear-gradient(135deg, var(--clr-accent2));
+}
+
+.styled-table thead th {
+  color: (var(--clr-white));
+}
+
 @media (max-width: 640px) {
   .nav-links {
     display: none;
