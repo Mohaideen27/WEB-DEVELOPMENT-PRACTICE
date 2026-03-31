@@ -36,14 +36,32 @@
     </div>
   </body>
   <script>
-    document.querySelector(".child").addEventListener("click", () => {
+    document.querySelector(".child").addEventListener("click", (e) => {
+      e.stopPropagation;
       alert("child clicked");
     });
-    document.querySelector(".childContainer").addEventListener("click", () => {
+    document.querySelector(".childContainer").addEventListener("click", (e) => {
+      e.stopPropagation;
       alert("childcontainer clicked");
     });
-    document.querySelector(".container").addEventListener("click", () => {
+    document.querySelector(".container").addEventListener("click", (e) => {
+      e.stopPropagation;
       alert("container clicked");
     });
+
+    // setInterval(() => {
+    //   document.querySelector(".child").style.background = "green";
+    // }, 3000);
+    // setInterval(() => {
+    //   document.querySelector(".child").style.background = "red";
+    // }, 5000);
+    // let a = setInterval(() => {
+    //   document.querySelector(".child").style.background = "white";
+    // }, 9000);
+    let a = setTimeout(() => {
+      document.querySelector(".child").style.background = "white";
+    }, 1000);
+
+    console.log(a);
   </script>
 </html>
