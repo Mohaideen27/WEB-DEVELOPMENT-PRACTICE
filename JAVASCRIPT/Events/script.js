@@ -16,5 +16,5 @@ let btn = document.getElementById("btn");
 // });
 
 btn.addEventListener("keydown", (e) => {
-  console.log(e);
+  console.log(e.key, e.keyCode);
 });
