@@ -46,10 +46,26 @@ console.log(a5);
 delete a2[2];
 console.log(a2);
 // CONCAT()
+
+let d1 = [1, 2, 3];
+let d2 = [4, 5, 6];
+let d3 = [9, 8, 7];
+console.log(d2.concat(d1, d3));
 // SORT()
+let u = [2, 7, 8, 1, 3, 9, 4, 5, 0];
+console.log(u.sort());
 // SPLICE()
+
+const u2 = [1, 2, 3, 4, 5];
+console.log(u2.splice(4, 1, 23, 24));
+console.log(u2);
 // SLICE()
+const u3 = [1, 8, 7, 4, 3, 8];
+console.log(u3.slice(2));
+console.log(u3.slice(1, 4));
 // REVERSE()
+console.log(u3.reverse());
+console.log(u3);
 
 // LOOPING THROUGH ARRAYS
 // FOREACHLOOP
