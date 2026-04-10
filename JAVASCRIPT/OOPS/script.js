@@ -30,14 +30,14 @@ class Animal {
 
 class Lion extends Animal {
   constructor(name) {
-    super()
+    super();
     this.name = name;
     console.log("Object is created and he is a lion");
   }
 
-  eats(){
-    super.eats()
-    console.log("I can roar")
+  eats() {
+    super.eats();
+    console.log("I can roar");
   }
 }
 
@@ -46,3 +46,8 @@ console.log(a);
 
 let l = new Lion("Shera");
 console.log(l);
+
+console.log(l instanceof Lion);
+console.log(a instanceof Lion);
+console.log(l instanceof Animal);
+console.log(a instanceof Animal);

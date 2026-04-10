@@ -1,10 +1,11 @@
-class user {
+class User {
   constructor(name) {
+    // INVOKE THE SETTER
     this.name = name;
   }
 
   get name() {
-    return this.__name;
+    return this._name;
   }
 
   set name(value) {
@@ -15,7 +16,8 @@ class user {
     this._name = value;
   }
 }
-let user = new user("john");
-alert(user.name);
+let user = new User("john");
+console.log(user.name);
 
-user = new user("");
+user.name = "Sameer";
+console.log(user.name);
