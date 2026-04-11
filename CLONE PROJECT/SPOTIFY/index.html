@@ -1,12 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPOTIFY CLONE</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
-    <img src="logo.svg" alt="logo svg">
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+  </head>
+  <body>
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="home rounded bg-grey m-1 p-1">
+          <img class="invert" src="logo.svg" alt="logo svg" />
+          <ul>
+            <li>
+              <img class="invert" src="home.svg" alt="home icon svg" />Home
+            </li>
+            <li>
+              <img
+                class="invert"
+                src="search.svg"
+                alt="search icon svg"
+              />Search
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-grey flex rounded m-1 p-1">
+          <img class="invert lib-img" src="library.svg" alt="" />Your library
+        </div>
+      </div>
+      <div class="right rounded bg-grey"></div>
+    </div>
+  </body>
 </html>
