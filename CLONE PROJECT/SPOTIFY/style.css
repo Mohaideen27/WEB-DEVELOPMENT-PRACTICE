@@ -37,6 +37,13 @@ body {
   min-height: 75vh;
   position: relative;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header > * {
+  padding: 20px;
+}
 .home ul li {
   display: flex;
   gap: 10px;
@@ -71,4 +78,5 @@ body {
 
 .right {
   width: 75vw;
+  margin: 15px 0;
 }
