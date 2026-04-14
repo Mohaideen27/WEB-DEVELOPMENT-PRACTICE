@@ -113,6 +113,7 @@ body {
 }
 
 .right {
+  position: relative;
   width: 75vw;
   margin: 15px 0;
   max-height: 100vh;
@@ -174,4 +175,20 @@ body {
   right: 13px;
   opacity: 0;
   transition: all 1s ease-out;
+}
+
+.playbar {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  gap: 15px
+  ;
+  bottom: 0;
+  width: 100%;
+  background-color: #171f17;
+  padding: 18px;
+}
+
+.playbar > * {
+  height: 30px;
 }
