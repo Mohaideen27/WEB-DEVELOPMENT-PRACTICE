@@ -15,6 +15,7 @@
     sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .sp-logo {
@@ -180,20 +181,26 @@ body {
 
 .playbar {
   display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 0px;
   left: 0px;
-  width: 80%;
-  justify-content: center;
-  gap: 15px;
-  bottom: 0;
   width: 100%;
+  align-items: center;
+  gap: 10px;
   background-color: #171f17;
-  padding: 18px;
+  padding: 10px;
+  height: 80px;
 }
 
-.playbar > * {
+/* .playbar > * {
   height: 30px;
+} */
+
+.songbtns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 .songbtns img {
   width: 20px;
@@ -225,7 +232,7 @@ body {
   align-items: center;
   justify-content: left;
   position: relative;
-  height: 40px;
+  height: 60px;
 }
 .songlist li img {
   width: 20px;
@@ -243,4 +250,22 @@ body {
 .playnow span {
   width: 20px;
   font-size: 10px;
+}
+
+.seekbar {
+  /* position: relative; */
+  /* bottom: 15px; */
+  width: 90%;
+  height: 4px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  transition: left 0.5s;
 }

@@ -1,5 +1,5 @@
 console.log("Lets start working on Javascript");
-
+let currentSong = new Audio();
 async function getSongs() {
   let a = await fetch("http://127.0.0.1:3000/songs/");
   let response = await a.text();
@@ -15,6 +15,12 @@ async function getSongs() {
   }
   return songs;
 }
+
+const playMusic = (track) => {
+  // let audio = new Audio("/songs/" + track);
+  currentSong.src = "/songs/" + track;
+  currentSong.play();
+};
 
 async function main() {
   let songs = await getSongs();
@@ -48,11 +54,20 @@ async function main() {
               </li>`;
   }
 
-  var audio = new Audio(songs[0]);
-  // audio.play();
-  audio.addEventListener("loadeddata", () => {
-    let duration = audio.duration;
-    console.log(duration);
+  Array.from(
+    document.querySelector(".songlist").getElementsByTagName("li"),
+  ).forEach((e) => {
+    e.addEventListener("click", (element) => {
+      console.log(e.querySelector(".info").firstElementChild.innerHTML);
+      playMusic(e.querySelector(".info").firstElementChild.innerHTML);
+    });
   });
+
+  // var audio = new Audio(songs[0]);
+  // audio.play();
+  // audio.addEventListener("loadeddata", () => {
+  //   let duration = audio.duration;
+  //   console.log(duration);
+  // });
 }
 main();
