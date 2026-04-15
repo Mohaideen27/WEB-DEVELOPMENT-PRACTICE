@@ -65,6 +65,7 @@ body {
   /* padding: 20px; */
   min-height: 75vh;
   position: relative;
+  margin: 5px 5px 40px 5px;
 }
 .header {
   display: flex;
@@ -179,7 +180,10 @@ body {
 
 .playbar {
   display: flex;
-  position: absolute;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 80%;
   justify-content: center;
   gap: 15px;
   bottom: 0;
@@ -195,7 +199,7 @@ body {
   width: 20px;
 }
 
-.songlist{
+.songlist {
   height: 500px;
   overflow: auto;
   margin: 20px 0px 60px 0px;
