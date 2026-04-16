@@ -20,6 +20,7 @@ const playMusic = (track) => {
   // let audio = new Audio("/songs/" + track);
   currentSong.src = "/songs/" + track;
   currentSong.play();
+  play.src = "pause.svg";
 };
 
 async function main() {
@@ -54,6 +55,8 @@ async function main() {
               </li>`;
   }
 
+  // ATTACH AN EVENT LISTENER TO EACH SONG
+
   Array.from(
     document.querySelector(".songlist").getElementsByTagName("li"),
   ).forEach((e) => {
@@ -69,5 +72,16 @@ async function main() {
   //   let duration = audio.duration;
   //   console.log(duration);
   // });
+
+  // ATTACH AN EVENT LISTENER TO PLAY, NEXT AND PREVIOUS
+  play.addEventListener("click", () => {
+    if (currentSong.paused) {
+      currentSong.play();
+      play.src = "pause.svg";
+    } else {
+      currentSong.pause();
+      play.src = "media-player-ui-button-play.svg";
+    }
+  });
 }
 main();
