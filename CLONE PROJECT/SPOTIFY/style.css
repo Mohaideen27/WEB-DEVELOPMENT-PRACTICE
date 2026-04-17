@@ -297,3 +297,39 @@ body {
   left: 0%;
   transition: left 1s;
 }
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1500px) {
+  .left {
+    border: red solid 2px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s;
+    width: 383px;
+  }
+
+  .right {
+    margin: 10px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hamburger {
+    display: block;
+    border: #171f17;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hamburger img {
+    width: 25px;
+  }
+}
