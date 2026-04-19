@@ -19,6 +19,7 @@
 }
 
 .sp-logo {
+  position: relative;
   gap: 5px;
   font-size: 13px;
   align-items: center;
@@ -300,6 +301,13 @@ body {
 
 .hamburger {
   display: none;
+  cursor: pointer;
+}
+
+.cross {
+  position: absolute;
+  left: 95%;
+  width: 15px;
   cursor: pointer;
 }
 
