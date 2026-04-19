@@ -115,4 +115,9 @@ async function main() {
     currentSong.currentTime = (currentSong.duration * percent) / 100;
   });
 }
+
+// ADD AN EVENT LISTENER FOR HAMBURGER
+document.querySelector(".hamburger").addEventListener("click", () => {
+  document.querySelector(".left").style.left = "0%";
+});
 main();
