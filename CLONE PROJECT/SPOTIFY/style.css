@@ -191,7 +191,7 @@ body {
   gap: 10px;
   background-color: #171f17;
   padding: 10px;
-  height: 80px;
+  height: 90px;
 }
 
 .playbarrow2 {
@@ -305,13 +305,17 @@ body {
 }
 
 .cross {
-  position: absolute;
-  left: 95%;
-  width: 15px;
-  cursor: pointer;
+  display: none;
 }
 
 @media (max-width: 1500px) {
+  .cross {
+    display: block;
+    position: absolute;
+    left: 95%;
+    width: 15px;
+    cursor: pointer;
+  }
   .left {
     background-color: #222222;
     position: absolute;
@@ -347,16 +351,33 @@ body {
   }
 }
 
-@media (max-width: 450px) {
-  .songinfo,
-  .songtime {
-    display: none;
+@media (max-width: 550px) {
+  .left {
+    margin: 0px;
+    width: 100%;
+  }
+  .playbar {
+    box-sizing: border-box;
+    width: 95%;
+    height: 130px;
+    margin: 10px;
+    border-radius: 20px;
+  }
+  .playbarrow2 {
+    display: flex;
+    flex-direction: column;
   }
 
   .cardContainer {
     justify-content: center;
   }
   .songbtns {
-    transform: scale(1.7);
+    transform: scale(1.5);
+  }
+
+  .spotify-playlist .card {
+    margin: 0px;
+    padding: 30px 30px;
+    width: 75vw;
   }
 }
