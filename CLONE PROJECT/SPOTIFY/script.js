@@ -143,4 +143,13 @@ next.addEventListener("click", () => {
   }
 });
 
+// ADD AN EVENT TO VOLUME
+document
+  .querySelector(".range")
+  .getElementsByTagName("input")[0]
+  .addEventListener("change", (e) => {
+    // console.log(e, e.target.value);
+    currentSong.volume = parseInt(e.target.value) / 100;
+  });
+
 main();

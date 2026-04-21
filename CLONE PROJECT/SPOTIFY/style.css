@@ -215,11 +215,15 @@ body {
   justify-content: end;
   align-items: center;
 }
+
+.volume:hover::after {
+  content: "100%";
+}
 .volume img {
   height: 20px;
 }
 
-.v-bar {
+/* .v-bar {
   position: relative;
   display: flex;
   border: 2px solid black;
@@ -236,10 +240,11 @@ body {
   background-color: black;
   border-radius: 50%;
   transition: left 1s;
-}
+} */
 
 .songtime {
   flex: 1;
+  align-items: end;
 }
 
 /* .songinfo,
@@ -407,6 +412,10 @@ body {
   }
   .songbtns {
     transform: scale(1.5);
+  }
+
+  .volume {
+    margin: 10px;
   }
 
   .v-bar {
