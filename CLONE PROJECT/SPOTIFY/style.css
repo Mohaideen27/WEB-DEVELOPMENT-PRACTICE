@@ -206,7 +206,38 @@ body {
 /* .playbar > * {
   height: 30px;
 } */
-.songinfo,
+.songinfo {
+  flex: 3;
+}
+.volume {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+  align-items: center;
+}
+.volume img {
+  height: 20px;
+}
+
+.v-bar {
+  position: relative;
+  display: flex;
+  border: 2px solid black;
+  height: 2px;
+  width: 7vw;
+  align-items: center;
+}
+
+.v-circle {
+  position: absolute;
+  left: -2%;
+  height: 15px;
+  width: 15px;
+  background-color: black;
+  border-radius: 50%;
+  transition: left 1s;
+}
+
 .songtime {
   flex: 1;
 }
@@ -224,7 +255,7 @@ body {
 
 .songbtns {
   display: flex;
-  flex: 1;
+  flex: 3;
   margin: 15px;
   justify-content: center;
   gap: 20px;
@@ -359,11 +390,14 @@ body {
   .playbar {
     box-sizing: border-box;
     width: 95%;
-    height: 130px;
+    height: 170px;
     margin: 10px;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
   }
   .playbarrow2 {
+    gap: 3px;
     display: flex;
     flex-direction: column;
   }
@@ -373,6 +407,10 @@ body {
   }
   .songbtns {
     transform: scale(1.5);
+  }
+
+  .v-bar {
+    width: 25vw;
   }
 
   .spotify-playlist .card {

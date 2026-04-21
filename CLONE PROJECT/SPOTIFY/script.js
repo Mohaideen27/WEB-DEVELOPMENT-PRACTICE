@@ -1,5 +1,6 @@
 console.log("Lets start working on Javascript");
 let currentSong = new Audio();
+let songs;
 function formatTime(seconds) {
   // Ensure we are working with a positive number
   let totalSeconds = Math.floor(seconds);
@@ -40,7 +41,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function main() {
-  let songs = await getSongs();
+  songs = await getSongs();
   playMusic(songs[0], true);
 
   let songUL = document
@@ -123,4 +124,23 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 document.querySelector(".cross").addEventListener("click", () => {
   document.querySelector(".left").style.left = "-120%";
 });
+// ADD AN EVENT LISTENER TO PREVIOUS AND NEXT
+previous.addEventListener("click", () => {
+  console.log("previous clicked");
+  let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+  console.log(songs, index);
+  if (index - 1 > 0) {
+    playMusic(songs[index - 1]);
+  }
+});
+
+next.addEventListener("click", () => {
+  console.log("next clicked");
+  let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+  console.log(songs, index);
+  if (index + 1 < songs.length) {
+    playMusic(songs[index + 1]);
+  }
+});
+
 main();
