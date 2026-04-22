@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --a: 0;
+}
 * {
   font-family:
     system-ui,
@@ -170,13 +173,21 @@ body {
   position: relative;
   width: 200px;
   /* border: 2px solid red; */
+  transition: all 0.3s;
+}
+
+.card:hover {
+  background-color: #535353;
+  transform: scale(1.03);
+  cursor: pointer;
+  --a: 1;
 }
 
 .play {
   position: absolute;
   bottom: 103px;
   right: 13px;
-  opacity: 0;
+  opacity: var(--a);
   transition: all 1s ease-out;
 }
 
