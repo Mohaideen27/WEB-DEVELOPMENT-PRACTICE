@@ -2,6 +2,7 @@ console.log("Lets start working on Javascript");
 let currentSong = new Audio();
 let songs;
 let currFolder;
+
 function formatTime(seconds) {
   // Ensure we are working with a positive number
   let totalSeconds = Math.floor(seconds);
@@ -153,5 +154,13 @@ document
     // console.log(e, e.target.value);
     currentSong.volume = parseInt(e.target.value) / 100;
   });
+
+// LOAD THE PLAYLIST WHENEVER CARD IS CLICKED
+Array.from(document.getElementsByClassName("card")).forEach((e) => {
+  e.addEventListener("click", async (item) => {
+    console.log(item, item.target.dataset);
+    songs = await getSongs(`songs/${item.target.dataset.folder}`);
+  });
+});
 
 main();
