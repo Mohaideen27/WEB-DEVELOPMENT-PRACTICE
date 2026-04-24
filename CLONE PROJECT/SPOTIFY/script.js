@@ -26,7 +26,7 @@ async function getSongs(folder) {
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
     if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split(`${folder}`)[1]);
+      console.log(songs.push(element.href.split(`${folder}`)[1]));
     }
   }
   return songs;
@@ -158,8 +158,8 @@ document
 // LOAD THE PLAYLIST WHENEVER CARD IS CLICKED
 Array.from(document.getElementsByClassName("card")).forEach((e) => {
   e.addEventListener("click", async (item) => {
-    console.log(item, item.target.dataset);
-    songs = await getSongs(`songs/${item.target.dataset.folder}`);
+    console.log(item.currentTarget, item.currentTarget.dataset);
+    songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
   });
 });
 
