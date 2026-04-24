@@ -1,52 +1,16 @@
 console.log("Lets start working on Javascript");
 let currentSong = new Audio();
 let songs;
-function formatTime(seconds) {
-  // Ensure we are working with a positive number
-  let totalSeconds = Math.floor(seconds);
-
-  let minutes = Math.floor(totalSeconds / 60);
-  let remainingSeconds = totalSeconds % 60;
-
-  // Use .padStart to ensure the seconds always show two digits
-  let formattedSeconds = remainingSeconds.toString().padStart(2, "0");
-
-  return `${minutes}:${formattedSeconds}`;
-}
-async function getSongs() {
-  let a = await fetch("http://127.0.0.1:3000/songs/");
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  let songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split("/%5Csongs%5C")[1]);
-    }
-  }
-  return songs;
-}
-
-const playMusic = (track, pause = false) => {
-  // let audio = new Audio("/songs/" + track);
-  currentSong.src = "/songs/" + track;
-  if (!pause) {
-    currentSong.play();
-  }
-  play.src = "pause.svg";
-  document.querySelector(".songinfo").innerHTML = decodeURI(track);
-  document.querySelector(".songtime").innerHTML = "00:00/00:00";
-};
-
-async function main() {
-  songs = await getSongs();
-  playMusic(songs[0], true);
-
+let currFolder;
+function updateSongListUI() {
   let songUL = document
     .querySelector(".songlist")
     .getElementsByTagName("ul")[0];
+  songUL.innerHTML = "";
+  if (!songs || !Array.isArray(songs)) {
+    console.error("songs array is not ready or is undefined");
+    return;
+  }
 
   for (const song of songs) {
     songUL.innerHTML =
@@ -82,6 +46,60 @@ async function main() {
       playMusic(e.querySelector(".info").firstElementChild.innerHTML);
     });
   });
+}
+function formatTime(seconds) {
+  // Ensure we are working with a positive number
+  let totalSeconds = Math.floor(seconds);
+
+  let minutes = Math.floor(totalSeconds / 60);
+  let remainingSeconds = totalSeconds % 60;
+
+  // Use .padStart to ensure the seconds always show two digits
+  let formattedSeconds = remainingSeconds.toString().padStart(2, "0");
+
+  return `${minutes}:${formattedSeconds}`;
+}
+async function getSongs(folder) {
+  currFolder = folder;
+  let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/`);
+  let response = await a.text();
+  let div = document.createElement("div");
+  div.innerHTML = response;
+  let as = div.getElementsByTagName("a");
+  let songs = [];
+  for (let index = 0; index < as.length; index++) {
+    const element = as[index];
+    if (element.href.endsWith(".mp3")) {
+      let url = new URL(element.href);
+      let pathParts = pathParts[pathParts.length - 1];
+      tempSongs.push(filename);
+      songs.push(element.href.split(`/${folder}/`)[1]);
+    }
+  }
+  updateSongListUI();
+  return songs;
+}
+
+const playMusic = (track, pause = false) => {
+  // let audio = new Audio("/songs/" + track);
+  currentSong.src = `/songs/${currFolder}/` + track;
+  if (!pause) {
+    currentSong.play();
+  }
+  play.src = "pause.svg";
+  document.querySelector(".songinfo").innerHTML = decodeURI(track);
+  document.querySelector(".songtime").innerHTML = "00:00/00:00";
+};
+
+async function main() {
+  songs = await getSongs("3movie");
+  playMusic(songs[0], true);
+
+  if (songs && songs.length > 0) {
+    playMusic(songs[0], true);
+  } else {
+    console.error("No songs found in the folder!");
+  }
 
   // var audio = new Audio(songs[0]);
   // audio.play();
@@ -151,5 +169,15 @@ document
     // console.log(e, e.target.value);
     currentSong.volume = parseInt(e.target.value) / 100;
   });
+
+// ADD AN EVENT FOR SELECTING ALBUM
+
+Array.from(document.getElementsByClassName("card")).forEach((e) => {
+  e.addEventListener("click", async (item) => {
+    console.log("Fetching Songs");
+    songs = await getSongs(`${item.currentTarget.dataset.folder}`);
+    playMusic(songs[0]);
+  });
+});
 
 main();
