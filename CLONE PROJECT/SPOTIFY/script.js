@@ -61,23 +61,27 @@ function formatTime(seconds) {
 }
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/`);
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  let songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      let url = new URL(element.href);
-      let pathParts = pathParts[pathParts.length - 1];
-      tempSongs.push(filename);
-      songs.push(element.href.split(`/${folder}/`)[1]);
+  try {
+    let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/`);
+    let response = await a.text();
+    let div = document.createElement("div");
+    div.innerHTML = response;
+    let as = div.getElementsByTagName("a");
+    songs = [];
+    for (let index = 0; index < as.length; index++) {
+      const element = as[index];
+      if (element.href.endsWith(".mp3")) {
+        let url = new URL(element.href);
+        let pathParts = url.pathname.split("/");
+        let filename = pathParts[pathParts.length - 1];
+        songs.push(filename);
+      }
     }
+    updateSongListUI();
+    return songs;
+  } catch (error) {
+    console.error("Error fetching songs:", error);
   }
-  updateSongListUI();
-  return songs;
 }
 
 const playMusic = (track, pause = false) => {
@@ -85,6 +89,7 @@ const playMusic = (track, pause = false) => {
   currentSong.src = `/songs/${currFolder}/` + track;
   if (!pause) {
     currentSong.play();
+    play.src = "pause.svg";
   }
   play.src = "pause.svg";
   document.querySelector(".songinfo").innerHTML = decodeURI(track);
@@ -93,8 +98,6 @@ const playMusic = (track, pause = false) => {
 
 async function main() {
   songs = await getSongs("3movie");
-  playMusic(songs[0], true);
-
   if (songs && songs.length > 0) {
     playMusic(songs[0], true);
   } else {
