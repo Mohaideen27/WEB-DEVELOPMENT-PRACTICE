@@ -172,6 +172,7 @@ body {
   padding: 10px;
   position: relative;
   width: 300px;
+  cursor: pointer;
   /* border: 2px solid red; */
 }
 
@@ -237,17 +238,18 @@ body {
 .volume {
   display: flex;
   flex: 1;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
 
-.volume:hover::after {
-  content: "100%";
-}
 .volume img {
   height: 20px;
 }
 
+input[name="volume"] {
+  accent-color: rgb(79, 79, 79);
+  cursor: pointer;
+}
 /* .v-bar {
   position: relative;
   display: flex;
