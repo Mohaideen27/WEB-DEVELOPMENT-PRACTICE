@@ -57,7 +57,7 @@ const playMusic = (track, pause = false) => {
   if (!pause) {
     currentSong.play();
   }
-  play.src = "pause.svg";
+  play.src = "img/pause.svg";
   document.querySelector(".songinfo").innerHTML = decodeURIComponent(
     track.split("%5C").pop(),
   );
@@ -118,10 +118,10 @@ async function main() {
   play.addEventListener("click", () => {
     if (currentSong.paused) {
       currentSong.play();
-      play.src = "pause.svg";
+      play.src = "img/pause.svg";
     } else {
       currentSong.pause();
-      play.src = "media-player-ui-button-play.svg";
+      play.src = "img/media-player-ui-button-play.svg";
     }
   });
 
@@ -186,11 +186,11 @@ document.querySelectorAll(".card").forEach((card) => {
 document.querySelector(".volume img").addEventListener("click", (e) => {
   console.log(e.target.src);
   if (e.target.src.includes("volume-icon.svg")) {
-    e.target.src = "mute.svg";
+    e.target.src = "img/mute.svg";
     currentSong.volume = 0;
     document.querySelector(".range").getElementsByTagName("input")[0].value = 0;
   } else {
-    e.target.src = "volume-icon.svg";
+    e.target.src = "img/volume-icon.svg";
     currentSong.volume = 0.1;
     document.querySelector(".range").getElementsByTagName("input")[0].value =
       10;
