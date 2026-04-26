@@ -240,10 +240,12 @@ body {
   flex: 1;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .volume img {
   height: 20px;
+  /* cursor: pointer; */
 }
 
 input[name="volume"] {
@@ -346,7 +348,8 @@ input[name="volume"] {
   /* position: relative; */
   /* bottom: 15px; */
   width: 90%;
-  height: 4px;
+  height: 2px;
+  background-color: white;
   border: 1px solid rgb(255, 255, 255);
   cursor: pointer;
 }
@@ -357,7 +360,7 @@ input[name="volume"] {
   background-color: white;
   border-radius: 50%;
   position: relative;
-  top: -5px;
+  top: -7px;
   left: 0%;
   transition: left 1s;
 }
@@ -442,12 +445,10 @@ input[name="volume"] {
   }
 
   .volume {
+    cursor: pointer;
     margin: 10px;
   }
 
-  .v-bar {
-    width: 25vw;
-  }
 
   .spotify-playlist .card {
     margin: 0px;

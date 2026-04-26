@@ -64,11 +64,55 @@ const playMusic = (track, pause = false) => {
   document.querySelector(".songtime").innerHTML = "00:00/00:00";
 };
 
+// async function displayAlbums(folder) {
+//   let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/`);
+//   let response = await a.text();
+//   let div = document.createElement("div");
+//   div.innerHTML = response;
+//   // let c = decodeURIComponent(track.split("%5C"));
+//   // console.log(c);
+
+//   let b = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
+//   let res = await b.json();
+//   let cardContainer = document.querySelector(".cardContainer");
+//   console.log(res);
+//   cardContainer.innerHTML =
+//     cardContainer.innerHTML +
+//     `<div data-folder="dude" class="card">
+//               <div class="play">
+//                 <svg
+//                   width="48"
+//                   height="48"
+//                   viewBox="0 0 48 48"
+//                   fill="none"
+//                   xmlns="http://www.w3.org/2000/svg"
+//                 >
+//                   <circle cx="24" cy="24" r="24" fill="#1fdf64" />
+//                   <path d="M32.5 24.0001L19 32V16L32.5 24.0001Z" fill="black" />
+//                 </svg>
+//               </div>
+//               <img src="dude.jpg" alt="FINDING-HERE-IMG" />
+//               <h2>${res.title}</h2>
+//               <p>${res.description}
+//               </p>
+//             </div>`;
+//   // let res = await a.json();
+//   // console.log(res);
+//   // let anchors = div.getElementsByTagName("a");
+//   // // let folder = [];
+//   // Array.from(anchors).forEach((e) => {
+//   //   console.log(e.href);
+//   // });
+// }
+
 async function main() {
   currentFolder = "dude";
   songs = await getSongs(currentFolder);
   playMusic(songs[0], true);
   renderSongList(songs);
+
+  // DISPLAY ALL THE ALBUMS ON THE PAGE
+  // displayAlbums(currentFolder);
 
   // ATTACH AN EVENT LISTENER TO PLAY, NEXT AND PREVIOUS
   play.addEventListener("click", () => {
@@ -128,6 +172,7 @@ document
     currentSong.volume = parseInt(e.target.value) / 100;
   });
 
+//ADD AN EVENT TO PLAY THE ALBUM
 document.querySelectorAll(".card").forEach((card) => {
   card.addEventListener("click", async () => {
     currentFolder = card.dataset.folder;
@@ -137,4 +182,18 @@ document.querySelectorAll(".card").forEach((card) => {
   });
 });
 
+//ADD EVENT TO MUTE THE TRACK
+document.querySelector(".volume img").addEventListener("click", (e) => {
+  console.log(e.target.src);
+  if (e.target.src.includes("volume-icon.svg")) {
+    e.target.src = "mute.svg";
+    currentSong.volume = 0;
+    document.querySelector(".range").getElementsByTagName("input")[0].value = 0;
+  } else {
+    e.target.src = "volume-icon.svg";
+    currentSong.volume = 0.1;
+    document.querySelector(".range").getElementsByTagName("input")[0].value =
+      10;
+  }
+});
 main();
