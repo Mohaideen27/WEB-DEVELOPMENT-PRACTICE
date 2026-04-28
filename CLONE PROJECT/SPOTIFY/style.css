@@ -33,6 +33,10 @@ body {
   color: white;
 }
 
+.songlist li:hover{
+  background-color: #303030;
+
+}
 .card > * {
   padding-top: 10px;
 }
