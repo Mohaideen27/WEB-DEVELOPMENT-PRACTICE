@@ -178,6 +178,14 @@ body {
   width: 300px;
   cursor: pointer;
   /* border: 2px solid red; */
+  transition: all 0.3s;
+}
+
+.card:hover {
+  background-color: #535353;
+  transform: scale(1.03);
+  cursor: pointer;
+  --a: 1;
 }
 
 .card img {
