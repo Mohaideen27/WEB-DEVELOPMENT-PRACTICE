@@ -19,5 +19,12 @@
 // import { a, b, c } from "./mymodule.js";
 // console.log(a, b, c);
 
-import sam from "./mymodule.js";
-console.log(sam);
+// import sam from "./mymodule.js";
+// console.log(sam);
+
+// (function(exports,require,module, __filename, __dirname){
+
+// });
+const a = require("./mymodule2.js");
+
+console.log(a, __dirname, __filename);
