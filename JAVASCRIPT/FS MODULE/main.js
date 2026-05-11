@@ -25,6 +25,6 @@ fs.writeFile("sameer.txt", "Sameer is a naughty boy", () => {
   });
 });
 fs.appendFile("sameer.txt", "sameer is going to rock", (e, d) => {
-  console.log(d);
+  console.log(d );
 });
 console.log("ending");
