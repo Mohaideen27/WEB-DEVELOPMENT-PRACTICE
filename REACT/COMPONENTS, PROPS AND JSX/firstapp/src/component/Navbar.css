@@ -1,0 +1,16 @@
+body {
+  background-color: antiquewhite;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+li {
+  color: rgb(93, 60, 18);
+  list-style-type: none;
+  font-weight: 400;
+}
+nav {
+  padding: 10px;
+  border: 2px solid brown;
+}
