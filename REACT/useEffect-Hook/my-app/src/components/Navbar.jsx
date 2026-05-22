@@ -9,6 +9,9 @@ const Navbar = ({ color }) => {
   // Case 2: Run only on first render
   useEffect(() => {
     alert("Hey welcome to my page. This is the first render");
+    return () => {
+      alert("Navbar is unmounted");
+    };
   }, []);
 
   // Case 3: Run only when count value changes

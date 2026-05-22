@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Navbar color={color} />
+      {/* <Navbar color={color} /> */}
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
