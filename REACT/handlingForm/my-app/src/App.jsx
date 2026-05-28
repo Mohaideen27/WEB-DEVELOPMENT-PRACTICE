@@ -6,14 +6,31 @@ function App() {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+    setError,
+    formState: { errors, isSubmitting },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const delay = (d) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, d * 1000);
+    });
+  };
+  const onSubmit = async (data) => {
+    // SIMULATING NETWORK DELAY
+    await delay(2);
+    console.log(data);
+    if (data.username !== "sameer") {
+      setError("myform", { message: "Username is invalid" });
+    } else if (data.username === "raani") {
+      setError("blocked", { message: "User is blocked" });
+    }
+  };
 
   return (
     <>
       <div className="container">
+        {isSubmitting && <div>Loading...</div>}
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             placeholder="Username"
@@ -31,12 +48,20 @@ function App() {
           <br />
           <input
             placeholder="Password"
-            {...register("password")}
+            {...register("password", {
+              minLength: { value: 3, message: "Min length is 3" },
+            })}
             type="password"
             id=""
           />
+          {errors.password && (
+            <div className="red">{errors.password.message}</div>
+          )}
           <br />
-          <input type="submit" value="Submit" />
+          <input disabled={isSubmitting} type="submit" value="Submit" />
+          {errors.myform && <div className="red">{errors.myform.message}</div>}
+          {errors.blocked && <div className="red">{errors.blocked.message}</div>
+          }
         </form>
       </div>
     </>
