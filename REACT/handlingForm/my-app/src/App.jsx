@@ -19,11 +19,17 @@ function App() {
   const onSubmit = async (data) => {
     // SIMULATING NETWORK DELAY
     await delay(2);
-    console.log(data);
-    if (data.username !== "sameer") {
-      setError("myform", { message: "Username is invalid" });
-    } else if (data.username === "raani") {
+    let r = await fetch("http://localhost:3000/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    let res = await r.text();
+    console.log(data, res);
+    if (data.username === "raani") {
       setError("blocked", { message: "User is blocked" });
+    } else if (data.username !== "sameer") {
+      setError("myform", { message: "Username is invalid" });
     }
   };
 
@@ -60,8 +66,9 @@ function App() {
           <br />
           <input disabled={isSubmitting} type="submit" value="Submit" />
           {errors.myform && <div className="red">{errors.myform.message}</div>}
-          {errors.blocked && <div className="red">{errors.blocked.message}</div>
-          }
+          {errors.blocked && (
+            <div className="red">{errors.blocked.message}</div>
+          )}
         </form>
       </div>
     </>
