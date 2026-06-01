@@ -1,7 +1,14 @@
 import React from "react";
+import Script from "next/script";
 
 const page = () => {
-  return <div>I am contact page</div>;
+  return (
+    <div>
+      <Script>{`
+      alert("Welcome to contact page")`}</Script>
+      I am contact page
+    </div>
+  );
 };
 
 export default page;
