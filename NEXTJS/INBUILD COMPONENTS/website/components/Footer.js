@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -7,15 +8,15 @@ const Footer = () => {
         Copyright © Facebook | All right reserved
       </div>
       <ul className="flex gap-2 text-sm">
-        <a href="/">
+        <Link href="/">
           <li className="text-xs">Home</li>
-        </a>
-        <a href="/about">
+        </Link>
+        <Link href="/about">
           <li className="text-xs">About</li>
-        </a>
-        <a href="/contact">
+        </Link>
+        <Link href="/contact">
           <li className="text-xs">Contact</li>
-        </a>
+        </Link>
       </ul>
     </footer>
   );
