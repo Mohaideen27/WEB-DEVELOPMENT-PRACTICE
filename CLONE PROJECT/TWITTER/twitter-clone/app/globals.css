@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+.navbar ul {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbar ul li {
+  width: fit-content;
+  display: flex;
+  gap: 15px;
+  padding: 5px 15px;
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: rgb(242, 242, 242);
+  text-shadow:
+    0 0 1.5px currentColor,
+    0 0 0 currentColor;
+}
+
+#postBtn:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: smaller;
+  color: gray;
+  font-weight: 600;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+}
+
+.more {
+  transform: scale(1.3);
+  display: flex;
+  align-items: center;
+  filter: invert(0.7);
+}
