@@ -4,7 +4,7 @@ import Logo from "@/src/components/Logo";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar text-xl font-bold text-gray-200 my-4">
       <ul className="">
         <li>
           <span className="material-symbols-outlined">home</span>Home

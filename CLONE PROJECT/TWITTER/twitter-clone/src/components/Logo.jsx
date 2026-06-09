@@ -2,7 +2,7 @@ import * as React from "react";
 const Logo = (props) => (
   <svg
     aria-hidden="true"
-    className="invert h-10"
+    className="invert h-8"
     viewBox="0 0 24 24"
     {...props}
   >

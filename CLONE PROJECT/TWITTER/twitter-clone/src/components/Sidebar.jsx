@@ -7,21 +7,27 @@ const Sidebar = () => {
   return (
     <div>
       <div className="sidebar">
-        <div className="flex-col my-5">
+        <div className="flex-col my-3">
           <div className="logoComp flex justify-end">
-            <div className="logo w-50 mx-4">
+            <div className="logo w-60 mx-4">
               <Logo />
             </div>
           </div>
           <div className="navbarComp flex justify-end">
-            <Navbar />
+            <div className="w-67">
+              <Navbar />
+            </div>
           </div>
-          <div className="postComp">
-            <SidebarPost />
+          <div className="postComp flex justify-end">
+            <div className="w-67">
+              <SidebarPost />
+            </div>
           </div>
         </div>
         <div className="accountinfoComp flex justify-end">
-          <AccountInfo />
+          <div className="w-70">
+            <AccountInfo />
+          </div>
         </div>
       </div>
     </div>
