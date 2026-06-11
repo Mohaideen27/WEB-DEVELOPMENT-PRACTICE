@@ -3,7 +3,7 @@ import React from "react";
 const search = () => {
   return (
     <div>
-      <div className="border-[#333333] border h-10 w-85 my-1.5 rounded-full flex items-center">
+      <div className="border-[#333333] border h-10 w-85 my-1.5 rounded-full flex items-center mx-auto">
         <div className="searchIcon m-auto invert-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,7 @@ const page = () => {
           <MainSection />
         </div>
         <div className="container3 border border-[#333333] w-[63vw]">
-          <div className="mainArea border h-full w-97 flex justify-center">
+          <div className="mainArea h-full w-97 flex justify-center">
             <SidebarRight />
           </div>
         </div>

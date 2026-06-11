@@ -4,6 +4,7 @@ import Subscribe from "./Subscribe";
 import TodaysNews from "./TodaysNews";
 import WhatsHappening from "./WhatsHappening";
 import WhoToFollow from "./WhoToFollow";
+import Footer from "./Footer";
 const SidebarRight = () => {
   return (
     <div>
@@ -22,7 +23,9 @@ const SidebarRight = () => {
       <div className="whoToFollow">
         <WhoToFollow />
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 };
